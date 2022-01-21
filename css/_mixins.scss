@@ -1,0 +1,33 @@
+@mixin author($gradient, $alignment: center) {
+	text-align: $alignment;
+	color: $lightestSecondaryColor;
+	&::before {
+		content: ".";
+		display: block;
+		color: rgba(0, 0, 0, 0);
+		height: 0.2rem;
+		width: 3rem;
+		background: $gradient;
+		border-radius: $borderRadiusPrimary;
+		@if $alignment == center {
+			margin: 0 auto;
+		}
+		margin-top: 0.6rem;
+		margin-bottom: 0.4rem;
+	}
+}
+
+@mixin menu() {
+	display: inline;
+	cursor: pointer;
+	div {
+		height: 4px;
+		width: 36px;
+		background-color: $primaryColor;
+		margin-bottom: 4px;
+		border-radius: $borderRadiusPrimary;
+	}
+	div:last-child {
+		margin-bottom: 0;
+	}
+}

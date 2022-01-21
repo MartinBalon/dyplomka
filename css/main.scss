@@ -1,0 +1,316 @@
+// SASS By Martin Balon - 2022
+@import "./variables";
+@import "./mixins";
+
+// General styles
+* {
+	box-sizing: border-box;
+	font-family: $fontFamilyPrimary;
+	line-height: 1.5rem;
+}
+
+.centered {
+	margin: 0 auto;
+}
+
+body {
+	background-color: $primaryColor;
+	color: $secondaryColor;
+}
+
+footer {
+	background-color: $secondaryColor;
+	color: $darkPrimaryColor;
+}
+
+.quote {
+	font-style: italic;
+}
+
+h1,
+h2,
+.main-quote {
+	font-family: $fontFamilySecondary;
+}
+
+h1 {
+	font-size: $fontSizeXXL;
+	letter-spacing: 1px;
+}
+
+h2 {
+	font-size: $fontSizeXL;
+}
+
+h3,
+.main-quote {
+	font-size: $fontSizeL;
+	color: $lightSecondaryColor;
+}
+
+#scroll-down {
+	font-size: $fontSizeXXS;
+	color: $darkPrimaryColor;
+}
+
+p {
+	font-size: $fontSizeS;
+}
+
+h1,
+h2 {
+	font-weight: bold;
+}
+
+#scroll-down,
+h2,
+h3 {
+	text-align: center;
+}
+
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.quotes {
+	font-size: $fontSizeXXL;
+	color: $detailColor;
+}
+
+#main-author {
+	@include author($mainAuthorGradient);
+}
+
+#about-us-author {
+	@include author($aboutUsGradient);
+}
+
+#team-01 {
+	@include author($mainAuthorGradient, left);
+}
+
+#team-02 {
+	@include author($aboutUsGradient, left);
+}
+
+#testimonials-01 {
+	@include author($testimonial01Gradient);
+}
+
+#testimonials-02 {
+	@include author($testimonial02Gradient);
+}
+
+#testimonials-03 {
+	@include author($testimonial03Gradient);
+}
+
+#testimonials-04 {
+	@include author($testimonial04Gradient);
+}
+
+article,
+footer {
+	padding: $primaryPaddingS;
+}
+
+button {
+	display: block;
+	line-height: 1;
+	background-color: $buttonGradientBackground;
+	background: $buttonGradient;
+	color: $primaryColor;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+	border-radius: $borderRadiusPrimary;
+	padding: 0.4rem 1.6rem;
+	box-shadow: $secondaryBoxShadow;
+	&:hover {
+		background: $buttonGradientBackground;
+	}
+}
+
+header {
+	padding: 0.8rem;
+	width: 100%;
+	display: flex;
+	position: fixed;
+	top: 0;
+	justify-content: space-between;
+	p {
+		font-family: $fontFamilyLogo;
+		font-size: $fontSizeXL;
+		font-weight: bold;
+		color: $primaryColor;
+		letter-spacing: 1px;
+		display: inline;
+		cursor: pointer;
+		span {
+			font-family: $fontFamilyLogo;
+			color: $detailColor;
+		}
+	}
+	transition: all ease-out 0.4s;
+}
+
+.header-active {
+	background: $primaryColor;
+	box-shadow: $secondaryBoxShadow;
+	z-index: 98;
+	p {
+		color: $secondaryColor;
+	}
+}
+
+#hamburger-menu,
+#hamburger-menu-close {
+	@include menu;
+}
+
+#hamburger-menu-close {
+	position: fixed;
+	top: 0.8rem;
+	right: 0.8rem;
+}
+
+#hamburger-menu-close.hamburger-menu-close-active {
+	div:first-child {
+		transform: translateY(-100px);
+		transition: $transition;
+	}
+	div:nth-child(2n) {
+		transform: rotate(45deg) translate(5px, 6px);
+		transition: $transition;
+	}
+	div:nth-child(3n) {
+		transform: rotate(-45deg);
+		transition: $transition;
+	}
+}
+
+#hamburger-menu.hamburger-menu-active {
+	div {
+		background-color: $secondaryColor;
+	}
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	z-index: 99;
+	transform: translate(100%);
+	transition: transform ease-out 0.5s;
+	height: 100%;
+	width: 100%;
+	background: $secondaryColor;
+	color: $darkPrimaryColor;
+	padding: 6rem 2rem;
+	a {
+		color: $primaryColor;
+		display: inline-block;
+		font-size: $fontSizeXXL;
+		font-weight: bold;
+		margin-bottom: 0.6rem;
+		&:hover {
+			background: $linksGradient;
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+	p {
+		font-size: $fontSizeM;
+		&:first-of-type {
+			margin-top: 3rem;
+		}
+	}
+}
+
+#above-the-fold {
+	background: $primaryGradientBackground;
+	background: $primaryGradient;
+	color: $primaryColor;
+}
+
+#what-will-you-gain {
+	.col {
+		border-radius: $borderRadiusPrimary;
+		box-shadow: $secondaryBoxShadow;
+		padding: $secondaryPaddingS;
+		position: relative;
+	}
+}
+
+.corner {
+	width: 2rem;
+	height: 2rem;
+	background: $cornerGradientBackground;
+	background: $cornerGradient;
+	border-top-left-radius: $borderRadiusPrimary;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.tick {
+	position: absolute;
+	width: 1.2rem;
+	height: 1.2em;
+	z-index: 10;
+	top: 0.3rem;
+	left: 0.3rem;
+}
+
+#our-team {
+	img {
+		margin: 0 auto;
+		display: block;
+	}
+}
+
+#questions-and-answers {
+	.row {
+		border-radius: $borderRadiusPrimary;
+		box-shadow: $secondaryBoxShadow;
+		position: relative;
+		padding: $secondaryPaddingXS;
+		padding-left: 1.8rem;
+		line-height: 1.2rem;
+	}
+	p {
+		display: inline;
+		font-size: $fontSizeM;
+		line-height: 1.2rem;
+	}
+}
+
+.hexagon {
+	position: absolute;
+	left: 0.3rem; // to match padding of container
+	top: 0.3rem;
+	height: 1.4rem;
+	width: 1.24rem;
+	background: url("/assets/logo/hexagon-dark.svg") no-repeat center center;
+	background-size: cover;
+	float: left;
+	color: $primaryColor;
+	font-size: $fontSizeXS;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer {
+	color: $darkPrimaryColor;
+	text-align: center;
+}

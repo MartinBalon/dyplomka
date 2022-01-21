@@ -1,0 +1,92 @@
+// Colors
+$primaryColor: #fff;
+$darkPrimaryColor: #ddd;
+$secondaryColor: #333;
+$lightSecondaryColor: #5a5a5a;
+$lightestSecondaryColor: #969696;
+$detailColor: #ff5733;
+
+// Gradients
+$primaryGradientBackground: #082990;
+$primaryGradient: linear-gradient(
+	90deg,
+	$primaryGradientBackground 0%,
+	#087cac 100%
+);
+$buttonGradientBackground: #ff5733;
+$buttonGradient: linear-gradient(
+	0deg,
+	#d93636 0%,
+	$buttonGradientBackground 100%
+);
+$mainAuthorGradientBackground: #d94d00;
+$mainAuthorGradient: linear-gradient(
+	90deg,
+	$mainAuthorGradientBackground 0%,
+	#ffcf5f 100%
+);
+$aboutUsGradientBackground: #0071d9;
+$aboutUsGradient: linear-gradient(
+	90deg,
+	$aboutUsGradientBackground 0%,
+	#d65fff 100%
+);
+$testimonial01GradientBackground: #5ed900;
+$testimonial01Gradient: linear-gradient(
+	90deg,
+	$testimonial01GradientBackground 0%,
+	#ffdc5f 100%
+);
+$testimonial02GradientBackground: #d900ad;
+$testimonial02Gradient: linear-gradient(
+	90deg,
+	$testimonial02GradientBackground 0%,
+	#ff5f6f 100%
+);
+$testimonial03GradientBackground: #0071d9;
+$testimonial03Gradient: linear-gradient(
+	90deg,
+	$testimonial03GradientBackground 0%,
+	#d65fff 100%
+);
+$testimonial04GradientBackground: #ff5733;
+$testimonial04Gradient: linear-gradient(
+	90deg,
+	$testimonial04GradientBackground 0%,
+	#d93636 100%
+);
+$cornerGradientBackground: #12cc38;
+$cornerGradient: linear-gradient(
+	90deg,
+	$cornerGradientBackground 0%,
+	#68f860 100%
+);
+$linksGradient: linear-gradient(90deg, #ff0032 0%, #f11a6d 100%);
+
+// Shadows
+$secondaryBoxShadow: 0rem 0.4rem 0.8rem 0rem #00000033;
+
+// Font Family
+$fontFamilyPrimary: "Roboto", sans-serif;
+$fontFamilySecondary: "Playfair Display", serif;
+$fontFamilyLogo: "Pacifico", cursive;
+
+// Font Size
+$fontSizeXXS: 0.7rem;
+$fontSizeXS: 0.8rem;
+$fontSizeS: 0.9rem;
+$fontSizeM: 1rem;
+$fontSizeL: 1.1rem;
+$fontSizeXL: 1.2rem;
+$fontSizeXXL: 1.4rem;
+
+// Border radius
+$borderRadiusPrimary: 0.3rem;
+
+// padding
+$primaryPaddingS: 2rem 0.8rem;
+$secondaryPaddingXS: 0.3rem;
+$secondaryPaddingS: 0.8rem;
+
+// close menu transition
+$transition: transform ease-in 0.3s;
