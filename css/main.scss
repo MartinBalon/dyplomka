@@ -139,7 +139,7 @@ button {
 }
 
 header {
-	padding: 0.8rem;
+	padding: 0.8rem 0.8rem 0.4rem 0.8rem;
 	width: 100%;
 	display: flex;
 	position: fixed;
@@ -226,10 +226,23 @@ nav {
 			-webkit-text-fill-color: transparent;
 		}
 	}
+	a:last-child {
+		margin-bottom: 0;
+	}
 	p {
 		font-size: $fontSizeM;
-		&:first-of-type {
-			margin-top: 3rem;
+		color: $primaryColor;
+		font-weight: bold;
+	}
+	span::after {
+		@include menuSectionDivider();
+	}
+	.social-icons-container::before {
+		@include menuSectionDivider();
+	}
+	.social-icons {
+		a {
+			margin: 0;
 		}
 	}
 }
@@ -262,6 +275,7 @@ nav {
 	top: 0;
 	left: 0;
 }
+
 .tick {
 	position: absolute;
 	width: 1.2rem;
@@ -313,4 +327,16 @@ nav {
 footer {
 	color: $darkPrimaryColor;
 	text-align: center;
+}
+
+.social-icons {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	img {
+		height: 2.4rem;
+		width: 2.4rem;
+		margin: 0 0.2rem;
+	}
 }

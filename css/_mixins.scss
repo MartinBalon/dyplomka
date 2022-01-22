@@ -2,9 +2,8 @@
 	text-align: $alignment;
 	color: $lightestSecondaryColor;
 	&::before {
-		content: ".";
+		content: "";
 		display: block;
-		color: rgba(0, 0, 0, 0);
 		height: 0.2rem;
 		width: 3rem;
 		background: $gradient;
@@ -30,4 +29,15 @@
 	div:last-child {
 		margin-bottom: 0;
 	}
+}
+
+@mixin menuSectionDivider() {
+	content: "";
+	display: block;
+	height: 4px;
+	width: 3rem;
+	margin-top: 1.4rem;
+	margin-bottom: 1.4rem;
+	background: $linksGradient;
+	border-radius: $borderRadiusPrimary;
 }

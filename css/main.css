@@ -86,9 +86,8 @@ a {
 }
 
 #main-author::before {
-  content: ".";
+  content: "";
   display: block;
-  color: rgba(0, 0, 0, 0);
   height: 0.2rem;
   width: 3rem;
   background: -webkit-gradient(linear, left top, right top, from(#d94d00), to(#ffcf5f));
@@ -105,9 +104,8 @@ a {
 }
 
 #about-us-author::before {
-  content: ".";
+  content: "";
   display: block;
-  color: rgba(0, 0, 0, 0);
   height: 0.2rem;
   width: 3rem;
   background: -webkit-gradient(linear, left top, right top, from(#0071d9), to(#d65fff));
@@ -124,9 +122,8 @@ a {
 }
 
 #team-01::before {
-  content: ".";
+  content: "";
   display: block;
-  color: rgba(0, 0, 0, 0);
   height: 0.2rem;
   width: 3rem;
   background: -webkit-gradient(linear, left top, right top, from(#d94d00), to(#ffcf5f));
@@ -142,9 +139,8 @@ a {
 }
 
 #team-02::before {
-  content: ".";
+  content: "";
   display: block;
-  color: rgba(0, 0, 0, 0);
   height: 0.2rem;
   width: 3rem;
   background: -webkit-gradient(linear, left top, right top, from(#0071d9), to(#d65fff));
@@ -160,9 +156,8 @@ a {
 }
 
 #testimonials-01::before {
-  content: ".";
+  content: "";
   display: block;
-  color: rgba(0, 0, 0, 0);
   height: 0.2rem;
   width: 3rem;
   background: -webkit-gradient(linear, left top, right top, from(#5ed900), to(#ffdc5f));
@@ -179,9 +174,8 @@ a {
 }
 
 #testimonials-02::before {
-  content: ".";
+  content: "";
   display: block;
-  color: rgba(0, 0, 0, 0);
   height: 0.2rem;
   width: 3rem;
   background: -webkit-gradient(linear, left top, right top, from(#d900ad), to(#ff5f6f));
@@ -198,9 +192,8 @@ a {
 }
 
 #testimonials-03::before {
-  content: ".";
+  content: "";
   display: block;
-  color: rgba(0, 0, 0, 0);
   height: 0.2rem;
   width: 3rem;
   background: -webkit-gradient(linear, left top, right top, from(#0071d9), to(#d65fff));
@@ -217,9 +210,8 @@ a {
 }
 
 #testimonials-04::before {
-  content: ".";
+  content: "";
   display: block;
-  color: rgba(0, 0, 0, 0);
   height: 0.2rem;
   width: 3rem;
   background: -webkit-gradient(linear, left top, right top, from(#ff5733), to(#d93636));
@@ -256,7 +248,7 @@ button:hover {
 }
 
 header {
-  padding: 0.8rem;
+  padding: 0.8rem 0.8rem 0.4rem 0.8rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,19 +371,49 @@ nav a {
 }
 
 nav a:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#ff0032), to(#f11a6d));
-  background: linear-gradient(90deg, #ff0032 0%, #f11a6d 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#ff0033), to(#ed0556));
+  background: linear-gradient(90deg, #ff0033 0%, #ed0556 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-nav p {
-  font-size: 1rem;
+nav a:last-child {
+  margin-bottom: 0;
 }
 
-nav p:first-of-type {
-  margin-top: 3rem;
+nav p {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+nav span::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 3rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  background: -webkit-gradient(linear, left top, right top, from(#ff0033), to(#ed0556));
+  background: linear-gradient(90deg, #ff0033 0%, #ed0556 100%);
+  border-radius: 0.3rem;
+}
+
+nav .social-icons-container::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 3rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  background: -webkit-gradient(linear, left top, right top, from(#ff0033), to(#ed0556));
+  background: linear-gradient(90deg, #ff0033 0%, #ed0556 100%);
+  border-radius: 0.3rem;
+}
+
+nav .social-icons a {
+  margin: 0;
 }
 
 #above-the-fold {
@@ -479,5 +501,24 @@ nav p:first-of-type {
 footer {
   color: #ddd;
   text-align: center;
+}
+
+.social-icons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.social-icons img {
+  height: 2.4rem;
+  width: 2.4rem;
+  margin: 0 0.2rem;
 }
 /*# sourceMappingURL=main.css.map */

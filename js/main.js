@@ -5,6 +5,7 @@ const closeMenuButton = document.querySelector(
 const menu = document.querySelector("nav");
 const navBar = document.querySelector('[data-identifier="navbar"]');
 const navLinks = document.querySelector('[data-identifier="nav-links"]');
+const socialIcons = document.querySelector('[data-identifier="social-icons"]');
 
 let isMenuActive = false;
 let lastScroll = 0;
@@ -52,4 +53,6 @@ const animateCloseMenuButton = (startAnimation) => {
 menuButton.addEventListener("click", toggleNavigation);
 closeMenuButton.addEventListener("click", toggleNavigation);
 navLinks.addEventListener("click", toggleNavigation);
+socialIcons.addEventListener("click", toggleNavigation);
+
 window.addEventListener("scroll", showNavBarOnScroll);
