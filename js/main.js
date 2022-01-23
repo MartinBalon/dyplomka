@@ -9,6 +9,7 @@ const socialIcons = document.querySelector('[data-identifier="social-icons"]');
 
 let isMenuActive = false;
 let lastScroll = 0;
+let linkClicked = false;
 
 const toggleNavigation = () => {
 	if (!isMenuActive) {
@@ -25,19 +26,25 @@ const toggleNavigation = () => {
 };
 
 const showNavBarOnScroll = () => {
-	let scrollPosition = window.pageYOffset;
-	if (scrollPosition <= lastScroll) {
+	const scrollPosition = window.pageYOffset;
+
+	if (scrollPosition <= lastScroll && !linkClicked) {
 		navBar.style.top = "0";
 		navBar.classList.add("header-active");
 		menuButton.classList.add("hamburger-menu-active");
 	} else {
 		navBar.style.top = "-20%";
 	}
-	if (window.pageYOffset <= 50) {
+	if (scrollPosition === 0) {
+		navBar.style.top = "0";
 		navBar.classList.remove("header-active");
 		menuButton.classList.remove("hamburger-menu-active");
 	}
+
 	lastScroll = scrollPosition;
+	setTimeout(() => {
+		linkClicked = false;
+	}, 1000);
 };
 
 const animateCloseMenuButton = (startAnimation) => {
@@ -50,9 +57,14 @@ const animateCloseMenuButton = (startAnimation) => {
 	}, 400);
 };
 
+const onNavigateHandler = () => {
+	linkClicked = true;
+	toggleNavigation();
+};
+
 menuButton.addEventListener("click", toggleNavigation);
 closeMenuButton.addEventListener("click", toggleNavigation);
-navLinks.addEventListener("click", toggleNavigation);
+navLinks.addEventListener("click", onNavigateHandler);
 socialIcons.addEventListener("click", toggleNavigation);
 
 window.addEventListener("scroll", showNavBarOnScroll);

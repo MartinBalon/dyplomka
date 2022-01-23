@@ -31,7 +31,7 @@
 
 	<body>
 		<header data-identifier="navbar">
-			<a href="#above-the-fold">
+			<a href="#above-the-fold" data-identifier="link">
 				<p>D<span>+</span>plomka</p>
 			</a>
 			<div id="hamburger-menu" data-identifier="hamburger-menu">
@@ -48,12 +48,13 @@
 				<div></div>
 			</div>
 			<span data-identifier="nav-links">
-				<a href="#above-the-fold" data-identifier="link">ÚVOD</a><br />
-				<a href="#how-it-works" data-identifier="link">JAK PROBÍHÁ SPOLUPRÁCE</a
+				<a href="#above-the-fold" data-identifier="nav-link">ÚVOD</a><br />
+				<a href="#how-it-works" data-identifier="nav-link"
+					>JAK PROBÍHÁ SPOLUPRÁCE</a
 				><br />
-				<a href="#about-us" data-identifier="link">O NÁS</a><br />
-				<a href="#testimonials" data-identifier="link">HODNOCENÍ</a><br />
-				<a href="#contact-us" data-identifier="link">KONTAKT</a>
+				<a href="#about-us" data-identifier="nav-link">O NÁS</a><br />
+				<a href="#testimonials" data-identifier="nav-link">HODNOCENÍ</a><br />
+				<a href="#contact-us" data-identifier="nav-link">KONTAKT</a>
 			</span>
 			<p>+420 777 123 456</p>
 			<p>info@dyplomka.cz</p>
@@ -83,7 +84,9 @@
 					konzultace? Revize? Zpětnou vazbu? Nevíš, jak správně citovat? Jak má
 					vypadat poznámkový aparát? Nebo máš nějaké jiné další otázky?
 				</p>
-				<button class="centered">NAPIŠTE NÁM</button>
+				<button class="centered">
+					<a href="#contact-us">NAPIŠTE NÁM</a>
+				</button>
 			</div>
 			<p id="scroll-down">scroll down</p>
 		</article>

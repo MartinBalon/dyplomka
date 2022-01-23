@@ -9,6 +9,10 @@
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fff;
   color: #333;
@@ -245,6 +249,10 @@ button {
 
 button:hover {
   background: #ff5733;
+}
+
+button a {
+  color: #fff;
 }
 
 header {
