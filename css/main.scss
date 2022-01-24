@@ -125,7 +125,7 @@ footer {
 	padding: $primaryPaddingS;
 }
 
-button {
+.button {
 	display: block;
 	line-height: 1;
 	background-color: $buttonGradientBackground;
@@ -300,35 +300,50 @@ nav {
 }
 
 #questions-and-answers {
-	.row {
-		border-radius: $borderRadiusPrimary;
-		box-shadow: $secondaryBoxShadow;
+	.accordion {
+		background: #f0f0f0;
 		position: relative;
-		padding: $secondaryPaddingXS;
-		padding-left: 1.8rem;
-		line-height: 1.2rem;
-	}
-	p {
-		display: inline;
+		border: none;
+		width: 100%;
 		font-size: $fontSizeM;
-		line-height: 1.2rem;
+		padding: $secondaryPaddingS;
+		text-align: left;
+		cursor: pointer;
+		outline: none;
+		transition: background ease-out 0.4s;
+		&:hover {
+			background: #fafafa;
+		}
+		&:first-of-type {
+			border-radius: 0.3rem 0.3rem 0 0;
+		}
+		&:last-of-type {
+			border-radius: 0 0 0.3rem 0.3rem;
+		}
+		&::after {
+			content: "\002B";
+			position: absolute;
+			top: 50%;
+			margin-top: -0.4rem;
+			right: $secondaryPaddingS;
+			font-size: $fontSizeL;
+			color: #777;
+		}
 	}
-}
-
-.hexagon {
-	position: absolute;
-	left: 0.3rem; // to match padding of container
-	top: 0.3rem;
-	height: 1.4rem;
-	width: 1.24rem;
-	background: url("/assets/logo/hexagon-dark.svg") no-repeat center center;
-	background-size: cover;
-	float: left;
-	color: $primaryColor;
-	font-size: $fontSizeXS;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	.accordion-active {
+		background: #fafafa;
+		&::after {
+			content: "\2212";
+			font-size: $fontSizeL;
+		}
+	}
+	.accordion-content {
+		padding: 0 1rem;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+		font-size: $fontSizeS;
+	}
 }
 
 footer {

@@ -6,6 +6,7 @@ const menu = document.querySelector("nav");
 const navBar = document.querySelector('[data-identifier="navbar"]');
 const navLinks = document.querySelector('[data-identifier="nav-links"]');
 const socialIcons = document.querySelector('[data-identifier="social-icons"]');
+const accordionButton = document.querySelectorAll(".accordion");
 
 let isMenuActive = false;
 let lastScroll = 0;
@@ -61,6 +62,18 @@ const onNavigateHandler = () => {
 	linkClicked = true;
 	toggleNavigation();
 };
+
+for (let i = 0; i < accordionButton.length; i++) {
+	accordionButton[i].addEventListener("click", () => {
+		accordionButton[i].classList.toggle("accordion-active");
+		const accordionContent = accordionButton[i].nextElementSibling;
+		if (accordionContent.style.maxHeight) {
+			accordionContent.style.maxHeight = null;
+		} else {
+			accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+		}
+	});
+}
 
 menuButton.addEventListener("click", toggleNavigation);
 closeMenuButton.addEventListener("click", toggleNavigation);
