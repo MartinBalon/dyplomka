@@ -1,12 +1,12 @@
-const menuButton = document.querySelector('[data-identifier="hamburger-menu"]');
-const closeMenuButton = document.querySelector(
-	'[data-identifier="hamburger-menu-close"]'
-);
 const menu = document.querySelector("nav");
 const navBar = document.querySelector('[data-identifier="navbar"]');
 const navLinks = document.querySelector('[data-identifier="nav-links"]');
 const socialIcons = document.querySelector('[data-identifier="social-icons"]');
 const accordionButton = document.querySelectorAll(".accordion");
+const menuButton = document.querySelector('[data-identifier="hamburger-menu"]');
+const closeMenuButton = document.querySelector(
+	'[data-identifier="hamburger-menu-close"]'
+);
 
 let isMenuActive = false;
 let lastScroll = 0;
@@ -69,6 +69,7 @@ for (let i = 0; i < accordionButton.length; i++) {
 		const accordionContent = accordionButton[i].nextElementSibling;
 		if (accordionContent.style.maxHeight) {
 			accordionContent.style.maxHeight = null;
+			accordionButton[i].classList.remove("accordion-active");
 		} else {
 			accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
 		}
@@ -79,5 +80,24 @@ menuButton.addEventListener("click", toggleNavigation);
 closeMenuButton.addEventListener("click", toggleNavigation);
 navLinks.addEventListener("click", onNavigateHandler);
 socialIcons.addEventListener("click", toggleNavigation);
-
 window.addEventListener("scroll", showNavBarOnScroll);
+
+const myImgs = document.querySelectorAll(".animate");
+
+observer = new IntersectionObserver(
+	(entries) => {
+		entries.forEach((entry) => {
+			entry.target.classList.toggle("show", entry.isIntersecting);
+			if (entry.isIntersecting) {
+				observer.unobserve(entry.target);
+			}
+		});
+	},
+	{
+		threshold: 0.1,
+	}
+);
+
+myImgs.forEach((image) => {
+	observer.observe(image);
+});

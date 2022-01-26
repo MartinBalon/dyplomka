@@ -41,3 +41,9 @@
 	background: $linksGradient;
 	border-radius: $borderRadiusPrimary;
 }
+
+@mixin ignoreLastColMarginBottom() {
+	.col:last-of-type {
+		margin-bottom: 0;
+	}
+}
