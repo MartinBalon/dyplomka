@@ -2,7 +2,7 @@
 $primaryColor: #fff;
 $darkPrimaryColor: #ddd;
 $secondaryColor: #333;
-$lightSecondaryColor: #5a5a5a;
+$lightSecondaryColor: #4b4b4b;
 $lightestSecondaryColor: #969696;
 $detailColor: #ff5733;
 
@@ -13,54 +13,69 @@ $primaryGradient: linear-gradient(
 	$primaryGradientBackground 0%,
 	#087cac 100%
 );
+
+$primaryGradientOverlay: linear-gradient(
+	90deg,
+	rgba(9, 65, 177, 0.96) 0%,
+	rgba(95, 20, 212, 0.75) 100%
+);
+
 $buttonGradientBackground: #ff5733;
 $buttonGradient: linear-gradient(
 	0deg,
 	#d93636 0%,
 	$buttonGradientBackground 100%
 );
+
 $mainAuthorGradientBackground: #d94d00;
 $mainAuthorGradient: linear-gradient(
 	90deg,
 	$mainAuthorGradientBackground 0%,
 	#ffcf5f 100%
 );
+
 $aboutUsGradientBackground: #0071d9;
 $aboutUsGradient: linear-gradient(
 	90deg,
 	$aboutUsGradientBackground 0%,
 	#d65fff 100%
 );
+
 $testimonial01GradientBackground: #5ed900;
 $testimonial01Gradient: linear-gradient(
 	90deg,
 	$testimonial01GradientBackground 0%,
 	#ffdc5f 100%
 );
+
 $testimonial02GradientBackground: #d900ad;
 $testimonial02Gradient: linear-gradient(
 	90deg,
 	$testimonial02GradientBackground 0%,
 	#ff5f6f 100%
 );
+
 $testimonial03GradientBackground: #0071d9;
 $testimonial03Gradient: linear-gradient(
 	90deg,
 	$testimonial03GradientBackground 0%,
 	#d65fff 100%
 );
+
 $testimonial04GradientBackground: #ff5733;
 $testimonial04Gradient: linear-gradient(
 	90deg,
 	$testimonial04GradientBackground 0%,
 	#d93636 100%
 );
+
 $cornerGradientBackground: #12cc38;
 $cornerGradient: linear-gradient(
 	90deg,
 	$cornerGradientBackground 0%,
 	#68f860 100%
 );
+
 $linksGradient: linear-gradient(90deg, #ff0033 0%, #ed0556 100%);
 
 // Shadows
@@ -79,15 +94,25 @@ $fontSizeM: 1rem;
 $fontSizeL: 1.1rem;
 $fontSizeXL: 1.2rem;
 $fontSizeXXL: 1.4rem;
+$fontSizeXXXL: 1.8rem;
+$fontSize4XL: 2.4rem;
 
 // Border radius
 $borderRadiusPrimary: 0.3rem;
 
 // padding
-$primaryPaddingS: 2rem 0.8rem;
+$primaryPaddingXS: 2rem 0.8rem;
+$primaryPaddingS: 2rem;
 $primaryPaddingM: 4rem 0.8rem 1rem 0.8rem;
+$primaryPaddingL: 4rem 2rem 1rem 2rem;
+$primaryPaddingXL: 4rem 3rem 1rem 3rem;
+$primaryPaddingXXL: 6rem 5rem 1rem 5rem;
+
 $secondaryPaddingXS: 0.3rem;
 $secondaryPaddingS: 0.8rem;
+$secondaryPaddingM: 1rem 1.6rem;
+
+$smallTabletPadding: 6rem 2rem 1rem 2rem;
 
 // margin
 $primaryMarginS: 1rem 0;
@@ -96,6 +121,18 @@ $primaryTopMarginM: 3rem;
 $primaryBottomMarginXS: 0.5rem;
 $primaryBottomMarginS: 1.5rem;
 $primaryBottomMarginM: 2rem;
+$primaryBottomMarginL: 3rem;
 
 // close menu transition
 $transition: transform ease-in 0.3s;
+
+// mediea queries
+$smallPhoneWidth: 22.5em; // 360px
+$phoneWidth: 28.125em; // 450px
+$phoneHeight: 37.5em; // 600px
+$largePhoneWidth: 31.25em; // 500px
+$smallTabletWidth: 48em; // 768px
+$tabletWidth: 64em; // 1024px
+$smallLaptopWidth: 85.375em; // 1366px
+$laptopWidth: 100em; // 1600px
+$desktopWidth: 120em; // 1920px

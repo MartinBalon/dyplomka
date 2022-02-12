@@ -9,16 +9,10 @@
 	line-height: 1.5rem;
 }
 
-.hidden-on-mobile {
+.about-us-images,
+.credits-main-background,
+.credits-about-us {
 	display: none;
-}
-
-.centered {
-	margin: 0 auto;
-}
-
-html {
-	scroll-behavior: smooth;
 }
 
 body {
@@ -69,12 +63,6 @@ h3,
 	color: $lightSecondaryColor;
 }
 
-#scroll-down {
-	font-size: $fontSizeXXS;
-	color: $darkPrimaryColor;
-	line-height: 1.2;
-}
-
 p {
 	font-size: $fontSizeS;
 }
@@ -91,6 +79,16 @@ h3 {
 
 a {
 	text-decoration: none;
+}
+
+.credits {
+	font-size: $fontSizeXS;
+	margin-top: 1rem;
+	a {
+		color: $darkPrimaryColor;
+		text-decoration: underline;
+		cursor: pointer;
+	}
 }
 
 .quotes {
@@ -135,8 +133,12 @@ article {
 }
 
 .button {
+	margin: 0 auto;
 	display: block;
+	max-width: 12rem;
+	text-align: center;
 	line-height: 1;
+	letter-spacing: 1px;
 	background-color: $buttonGradientBackground;
 	background: $buttonGradient;
 	color: $primaryColor;
@@ -150,13 +152,9 @@ article {
 	&:hover {
 		background: $buttonGradientBackground;
 	}
-	a {
-		color: $primaryColor;
-		line-height: 1;
-	}
 }
 
-header {
+.navbar {
 	padding: 0.8rem 0.8rem 0.4rem 0.8rem;
 	width: 100%;
 	display: flex;
@@ -179,7 +177,7 @@ header {
 	transition: all ease-out 0.4s;
 }
 
-.header-active {
+.navbar-active {
 	background: $primaryColor;
 	box-shadow: $secondaryBoxShadow;
 	z-index: 98;
@@ -230,21 +228,14 @@ nav {
 	width: 100%;
 	background: $secondaryColor;
 	color: $darkPrimaryColor;
-	padding: 6rem 2rem;
+	padding: 4rem 2rem;
 	a {
 		color: $primaryColor;
-		display: inline-block;
+		display: block;
 		font-size: $fontSizeXXL;
 		font-weight: bold;
 		margin-bottom: 0.6rem;
-		&:hover {
-			font-weight: 900;
-			background: $linksGradient;
-			color: transparent;
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
+		letter-spacing: 1px;
 	}
 	a:last-child {
 		margin-bottom: 0;
@@ -267,35 +258,18 @@ nav {
 	}
 }
 
-#above-the-fold {
+.showNavigation {
+	transform: translate(0%);
+}
+
+header {
 	background: $primaryGradientBackground;
 	background: $primaryGradient;
 	color: $primaryColor;
-	min-height: 100%;
-	padding: $primaryPaddingS;
+	padding: $primaryPaddingXS;
 	div {
-		padding-top: 4rem;
-	}
-}
-
-#scroll-down {
-	position: absolute;
-	display: block;
-	bottom: 5%;
-	left: 0;
-	right: 0;
-	text-align: center;
-	&::after {
-		content: "";
-		display: block;
-		position: absolute;
-		left: 50%;
-		margin-left: -0.2rem;
-		width: 0;
-		height: 0;
-		border-left: 0.4rem solid transparent;
-		border-right: 0.4rem solid transparent;
-		border-top: 0.4rem solid $darkPrimaryColor;
+		padding-top: 2rem;
+		padding-bottom: 4rem;
 	}
 }
 
@@ -308,6 +282,9 @@ nav {
 		width: 100%;
 		margin-bottom: $primaryBottomMarginXS;
 	}
+	.row {
+		text-align: center;
+	}
 }
 
 #what-will-you-gain {
@@ -317,6 +294,9 @@ nav {
 		padding: $secondaryPaddingS;
 		position: relative;
 		margin-bottom: $primaryBottomMarginS;
+		h3 {
+			margin-bottom: $primaryBottomMarginXS;
+		}
 	}
 	@include ignoreLastColMarginBottom();
 	.corner {
@@ -367,10 +347,14 @@ nav {
 	.col {
 		margin-bottom: $primaryBottomMarginS;
 	}
+	.button {
+		max-width: 20rem;
+	}
 	@include ignoreLastColMarginBottom();
 }
 
 #questions-and-answers {
+	margin-bottom: 2rem;
 	.accordion {
 		background: #f0f0f0;
 		position: relative;
@@ -378,6 +362,7 @@ nav {
 		width: 100%;
 		font-size: $fontSizeM;
 		padding: $secondaryPaddingS;
+		padding-right: 2rem;
 		text-align: left;
 		cursor: pointer;
 		outline: none;
@@ -395,7 +380,7 @@ nav {
 			content: "\002B";
 			position: absolute;
 			top: 50%;
-			margin-top: -0.4rem;
+			margin-top: -0.55rem;
 			right: $secondaryPaddingS;
 			font-size: $fontSizeL;
 			color: #777;
@@ -421,9 +406,15 @@ nav {
 footer {
 	color: $darkPrimaryColor;
 	text-align: center;
-	padding: $primaryPaddingS;
+	padding: $primaryPaddingXS;
 	.contact {
 		margin: 2rem 0;
+		a {
+			text-decoration: none;
+			color: $darkPrimaryColor;
+			display: block;
+			font-size: $fontSizeS;
+		}
 	}
 	.social-icons {
 		justify-content: center;
@@ -447,12 +438,417 @@ footer {
 }
 
 .animate {
-	transform: translateY(100px);
+	transform: translateY(50px);
 	opacity: 0;
-	transition: ease-out all 0.3s;
+	transition: ease-out all 0.4s;
 }
 
 .show {
 	transform: translateY(0);
 	opacity: 1;
+}
+
+@media screen and (min-height: $phoneHeight) {
+	nav {
+		padding: 6rem 2rem;
+	}
+}
+
+@media screen and (min-width: $smallPhoneWidth) {
+	article {
+		padding: $primaryPaddingL;
+	}
+
+	header {
+		padding: $primaryPaddingS;
+		div {
+			padding-top: 6rem;
+		}
+		.button {
+			margin-top: $primaryTopMarginM;
+		}
+	}
+
+	#what-will-you-gain .col {
+		padding: $secondaryPaddingM;
+	}
+}
+
+@media screen and (min-width: $phoneWidth) {
+	article {
+		padding: $primaryPaddingXL;
+	}
+
+	.col,
+	header div {
+		max-width: 22.5rem;
+		margin: auto;
+	}
+
+	header {
+		padding: $primaryPaddingXL;
+		div {
+			padding-top: 4rem;
+		}
+		.button {
+			margin-top: $primaryTopMarginM;
+		}
+	}
+}
+
+@media screen and (min-width: $largePhoneWidth) {
+	nav {
+		padding: 6rem 4rem;
+	}
+
+	h2 {
+		font-size: $fontSizeXXL;
+		margin-bottom: $primaryBottomMarginL;
+	}
+
+	footer h2 {
+		margin-bottom: $primaryBottomMarginM;
+	}
+
+	h3 {
+		font-size: $fontSizeXL;
+	}
+
+	footer p,
+	footer .contact a {
+		font-size: $fontSizeM;
+	}
+
+	#how-it-works .col,
+	.row {
+		margin-top: 5rem;
+	}
+
+	#what-will-you-gain .col {
+		margin-bottom: $primaryBottomMarginM;
+	}
+
+	#our-team .col {
+		margin-bottom: $primaryBottomMarginL;
+	}
+
+	article {
+		padding: $primaryPaddingXXL;
+	}
+}
+
+@media screen and (min-width: $smallTabletWidth) {
+	.credits-main-background {
+		display: block;
+	}
+
+	header {
+		background: $primaryGradientOverlay,
+			url("/assets/img/small-tablet-background.jpg") no-repeat center center;
+		background-size: cover;
+		div {
+			padding-top: 10rem;
+			padding-bottom: 6rem;
+			margin: 0;
+			max-width: 28rem;
+		}
+		h1 {
+			font-size: $fontSizeXXXL;
+			line-height: 2rem;
+		}
+		p {
+			font-size: $fontSizeL;
+		}
+	}
+
+	.showNavigation {
+		transform: translate(50%);
+	}
+
+	#hamburger-menu-close {
+		right: calc(0.8rem + 50%);
+	}
+
+	nav {
+		padding: 6rem 3rem;
+	}
+
+	article {
+		padding: $smallTabletPadding;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		max-width: 960px;
+		margin: auto;
+		h2 {
+			width: 100%;
+		}
+	}
+
+	.col {
+		max-width: 45%;
+	}
+
+	#how-it-works {
+		h2 {
+			margin: 0;
+		}
+		.row {
+			max-width: 70%;
+		}
+	}
+
+	#what-will-you-gain {
+		.col,
+		.col:last-of-type {
+			margin: 1rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	#about-us {
+		.about-us-description {
+			max-width: 70%;
+		}
+	}
+
+	#our-team .col {
+		margin-bottom: 0;
+	}
+
+	#testimonials .col {
+		margin: 1rem;
+	}
+
+	#questions-and-answers .accordion,
+	#questions-and-answers .accordion-content {
+		width: 80%;
+	}
+
+	#questions-and-answers {
+		margin-bottom: 4rem;
+	}
+
+	footer {
+		padding: 0;
+		padding-top: 2rem;
+		padding-bottom: 0.4rem;
+	}
+
+	footer h2 {
+		margin-bottom: 1rem;
+	}
+
+	.contact-us-wrapper {
+		display: flex;
+		justify-content: center;
+		div {
+			width: 25%;
+			align-self: center;
+		}
+	}
+}
+
+@media screen and (min-width: $tabletWidth) {
+	.showNavigation {
+		transform: translate(60%);
+	}
+
+	#hamburger-menu-close {
+		right: calc(0.8rem + 60%);
+	}
+
+	.contact-us-wrapper {
+		div {
+			width: 20%;
+		}
+	}
+
+	.navbar {
+		padding: 1rem 1.4rem 0.8rem 1.4rem;
+	}
+
+	#how-it-works .row {
+		margin-top: 8rem;
+	}
+
+	article {
+		padding: 8rem 2rem 1rem 2rem;
+	}
+}
+
+@media screen and (min-width: $smallLaptopWidth) {
+	.showNavigation {
+		transform: translate(70%);
+	}
+
+	#hamburger-menu-close {
+		right: calc(0.8rem + 70%);
+	}
+
+	header {
+		padding: 10rem 6rem;
+		div {
+			padding-top: 8rem;
+			padding-bottom: 0;
+			max-width: 36rem;
+		}
+		h1 {
+			font-size: $fontSize4XL;
+			line-height: 2.6rem;
+		}
+		p {
+			font-size: $fontSizeXXL;
+			line-height: 1.6rem;
+		}
+		.button {
+			margin-top: 4rem;
+		}
+	}
+
+	#how-it-works .row {
+		max-width: 42.5rem;
+	}
+
+	#about-us {
+		max-width: 93.75rem;
+		justify-content: space-around;
+		.about-us-images,
+		.about-us-description {
+			max-width: 40%;
+			align-self: flex-start;
+			margin: 0 2rem;
+		}
+		h2 {
+			margin-bottom: 5rem;
+		}
+	}
+
+	.about-us-images {
+		display: block;
+		position: relative;
+		height: 442px;
+		width: 300px;
+		img {
+			position: absolute;
+		}
+		.img-01 {
+			top: 0;
+			left: 0;
+		}
+		.img-02 {
+			top: 0;
+			left: 160px;
+		}
+		.img-03 {
+			top: 0;
+			left: 320px;
+		}
+		.img-04 {
+			top: 136px;
+			left: -80px;
+		}
+		.img-05 {
+			top: 136px;
+			left: 80px;
+		}
+		.img-06 {
+			top: 136px;
+			left: 240px;
+		}
+		.img-07 {
+			top: 272px;
+			left: 0px;
+		}
+		.img-08 {
+			top: 272px;
+			left: 160px;
+		}
+		.img-09 {
+			top: 272px;
+			left: 320px;
+		}
+	}
+
+	.contact-us-wrapper {
+		div {
+			width: 12%;
+		}
+	}
+}
+
+@media screen and (min-width: $laptopWidth) {
+	header {
+		height: 100%;
+		padding: 10rem 8rem;
+		background: $primaryGradientOverlay,
+			url("/assets/img/desktop-background.jpg") no-repeat center center;
+		background-size: cover;
+		div {
+			padding-top: 0;
+			position: absolute;
+			bottom: 20%;
+		}
+	}
+
+	.showNavigation {
+		transform: translate(75%);
+	}
+
+	#hamburger-menu-close {
+		right: calc(0.8rem + 75%);
+	}
+
+	article {
+		max-width: 1920px;
+		padding: 12rem 2rem 1rem 2rem;
+		&:first-of-type {
+			padding: 6rem 2rem 1rem 2rem;
+		}
+	}
+
+	.col {
+		max-width: 20%;
+	}
+
+	.button-wrapper {
+		width: 100%;
+	}
+
+	h2 {
+		margin-bottom: 5rem;
+		font-size: $fontSizeXXXL;
+		font-weight: 500;
+	}
+
+	#our-team .col {
+		margin: 0 4rem;
+	}
+
+	#questions-and-answers .accordion,
+	#questions-and-answers .accordion-content {
+		width: 60%;
+	}
+}
+
+@media screen and (min-width: $desktopWidth) {
+	.showNavigation {
+		transform: translate(78%);
+	}
+
+	#hamburger-menu-close {
+		right: calc(0.8rem + 78%);
+	}
+}
+
+@media screen and (min-width: 160em) {
+	.showNavigation {
+		transform: translate(85%);
+	}
+
+	#hamburger-menu-close {
+		right: calc(0.8rem + 85%);
+	}
 }

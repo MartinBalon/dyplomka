@@ -10,52 +10,46 @@
 		/>
 		<meta name="author" content="Martin Balon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="theme-color" content="#fff" />
 
 		<meta property="og:title" content="" />
 		<meta property="og:type" content="" />
 		<meta property="og:url" content="" />
 		<meta property="og:image" content="" />
 
-		<!-- <link rel="apple-touch-icon" href=""> -->
-		<!-- Place favicon.ico in the root directory -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600&family=Roboto:wght@400;700;900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@500;600&family=Roboto:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
-
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 
 	<body>
-		<header data-identifier="navbar">
-			<a href="#above-the-fold" data-identifier="link">
-				<p>D<span>+</span>plomka</p>
-			</a>
-			<div id="hamburger-menu" data-identifier="hamburger-menu">
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-		</header>
-
 		<nav>
 			<div id="hamburger-menu-close" data-identifier="hamburger-menu-close">
 				<div></div>
 				<div></div>
 				<div></div>
 			</div>
-			<span data-identifier="nav-links">
-				<a href="#above-the-fold">ÚVOD</a><br />
-				<a href="#how-it-works">JAK PROBÍHÁ SPOLUPRÁCE</a><br />
-				<a href="#about-us">O NÁS</a><br />
-				<a href="#testimonials">HODNOCENÍ</a><br />
-				<a href="#contact-us">KONTAKT</a>
+			<span class="nav-links" data-identifier="nav-links">
+				<a href="#home" data-identifier="link">ÚVOD</a>
+				<a href="#how-it-works" data-identifier="link">
+					JAK PROBÍHÁ SPOLUPRÁCE
+				</a>
+				<a href="#about-us" data-identifier="link">O NÁS</a>
+				<a href="#testimonials" data-identifier="link">HODNOCENÍ</a>
+				<a href="#contact-us" data-identifier="link">KONTAKT</a>
 			</span>
-			<p>+420 777 123 456</p>
-			<p>info@dyplomka.cz</p>
+			<a href="tel:+420777123456">+420 777 123 456</a>
+			<a href="mailto:info@dyplomka.cz">info@dyplomka.cz</a>
 			<div class="social-icons-container">
 				<div class="social-icons" data-identifier="social-icons">
 					<a
@@ -71,7 +65,18 @@
 			</div>
 		</nav>
 
-		<article id="above-the-fold">
+		<div class="navbar" data-identifier="navbar">
+			<a href="#home" data-identifier="link">
+				<p>D<span>+</span>plomka</p>
+			</a>
+			<div id="hamburger-menu" data-identifier="hamburger-menu">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<header id="home">
 			<div>
 				<h1>PROFESIONÁLNÍ KOUČOVÁNÍ DIPLOMOVÝCH PRACÍ</h1>
 				<p>
@@ -82,66 +87,61 @@
 					konzultace? Revize? Zpětnou vazbu? Nevíš, jak správně citovat? Jak má
 					vypadat poznámkový aparát? Nebo máš nějaké jiné další otázky?
 				</p>
-				<button class="centered button">
-					<a href="#contact-us">NAPIŠTE NÁM</a>
-				</button>
+				<a href="#contact-us" class="button" data-identifier="link">
+					NAPIŠTE NÁM
+				</a>
 			</div>
-			<p id="scroll-down">scroll down</p>
-		</article>
+		</header>
 
 		<article id="how-it-works">
 			<h2 class="animate">JAK PROBÍHÁ SPOLUPRÁCE</h2>
-			<div>
-				<div class="col animate">
-					<img src="assets/logo/01.svg" alt="" />
-					<p>
-						Osobní schůzka. dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea commodo consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-				</div>
-				<div class="col animate">
-					<img src="assets/logo/02.svg" alt="" />
-					<p>
-						Vytvoření harmogramu spolupráce. dolor sit amet, consectetur
-						adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-						esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-						cupidatat non proident, sunt in culpa qui officia deserunt mollit
-						anim id est laborum.
-					</p>
-				</div>
-				<div class="col animate">
-					<img src="assets/logo/03.svg" alt="" />
-					<p>
-						Koučink a konzultace. dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-						nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-				</div>
-				<div class="col animate">
-					<img src="assets/logo/04.svg" alt="" />
-					<p>
-						Obhajoba diplomové práce. dolor sit amet, consectetur adipiscing
-						elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-						dolor in reprehenderit in voluptate velit esse cillum dolore eu
-						fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est
-						laborum.
-					</p>
-				</div>
+			<div class="col animate">
+				<img src="assets/logo/01.svg" alt="" />
+				<p>
+					Osobní schůzka. dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+			<div class="col animate">
+				<img src="assets/logo/02.svg" alt="" />
+				<p>
+					Vytvoření harmogramu spolupráce. dolor sit amet, consectetur
+					adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+					magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+					irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+					fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+					sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+			<div class="col animate">
+				<img src="assets/logo/03.svg" alt="" />
+				<p>
+					Koučink a konzultace. dolor sit amet, consectetur adipiscing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+			<div class="col animate">
+				<img src="assets/logo/04.svg" alt="" />
+				<p>
+					Obhajoba diplomové práce. dolor sit amet, consectetur adipiscing elit,
+					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+					enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
 			</div>
 			<div class="row animate">
 				<p class="main-quote quote">
@@ -158,72 +158,78 @@
 
 		<article id="what-will-you-gain">
 			<h2 class="animate">CO NAŠÍ SPOLUPRACÍ ZÍSKÁŠ</h2>
-			<div>
-				<div class="col animate">
-					<img class="tick" src="/assets/logo/tick.svg" alt="White tick logo" />
-					<div class="corner"></div>
-					<h3>Lorem ipsum</h3>
-					<p>
-						Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-						esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-						cupidatat non proident, sunt in culpa qui officia deserunt mollit
-						anim id est laborum.
-					</p>
-				</div>
-				<div class="col animate">
-					<img class="tick" src="/assets/logo/tick.svg" alt="White tick logo" />
-					<div class="corner"></div>
-					<h3>Lorem ipsum</h3>
-					<p>
-						Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-						esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-						cupidatat non proident, sunt in culpa qui officia deserunt mollit
-						anim id est laborum.
-					</p>
-				</div>
-				<div class="col animate">
-					<img class="tick" src="/assets/logo/tick.svg" alt="White tick logo" />
-					<div class="corner"></div>
-					<h3>Lorem ipsum</h3>
-					<p>
-						Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-						esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-						cupidatat non proident, sunt in culpa qui officia deserunt mollit
-						anim id est laborum.
-					</p>
-				</div>
-				<div class="col animate">
-					<img class="tick" src="/assets/logo/tick.svg" alt="White tick logo" />
-					<div class="corner"></div>
-					<h3>Lorem ipsum</h3>
-					<p>
-						Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-						esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-						cupidatat non proident, sunt in culpa qui officia deserunt mollit
-						anim id est laborum.
-					</p>
-				</div>
+			<div class="col animate">
+				<img class="tick" src="/assets/logo/tick.svg" alt="White tick logo" />
+				<div class="corner"></div>
+				<h3>Lorem ipsum</h3>
+				<p>
+					Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+					exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est
+					laborum.
+				</p>
+			</div>
+			<div class="col animate">
+				<img class="tick" src="/assets/logo/tick.svg" alt="White tick logo" />
+				<div class="corner"></div>
+				<h3>Lorem ipsum</h3>
+				<p>
+					Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+					exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est
+					laborum.
+				</p>
+			</div>
+			<div class="col animate">
+				<img class="tick" src="/assets/logo/tick.svg" alt="White tick logo" />
+				<div class="corner"></div>
+				<h3>Lorem ipsum</h3>
+				<p>
+					Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+					exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est
+					laborum.
+				</p>
+			</div>
+			<div class="col animate">
+				<img class="tick" src="/assets/logo/tick.svg" alt="White tick logo" />
+				<div class="corner"></div>
+				<h3>Lorem ipsum</h3>
+				<p>
+					Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+					exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est
+					laborum.
+				</p>
 			</div>
 		</article>
 
-		<!-- Text slider -->
-
 		<article id="about-us">
 			<h2 class="animate">NĚCO MÁLO O NÁS</h2>
-			<img src="" class="hidden-on-mobile animate" alt="" />
-			<div>
+			<div class="about-us-images">
+				<img src="/assets/img/about-us-01.png" class="img-01 animate" alt="" />
+				<img src="/assets/img/about-us-02.png" class="img-02 animate" alt="" />
+				<img src="/assets/img/about-us-03.png" class="img-03 animate" alt="" />
+				<img src="/assets/img/about-us-04.png" class="img-04 animate" alt="" />
+				<img src="/assets/img/about-us-05.png" class="img-05 animate" alt="" />
+				<img src="/assets/img/about-us-06.png" class="img-06 animate" alt="" />
+				<img src="/assets/img/about-us-07.png" class="img-07 animate" alt="" />
+				<img src="/assets/img/about-us-08.png" class="img-08 animate" alt="" />
+				<img src="/assets/img/about-us-09.png" class="img-09 animate" alt="" />
+			</div>
+			<div class="about-us-description">
 				<p class="animate" id="about-us-desc">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -272,7 +278,7 @@
 					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 					culpa qui officia deserunt mollit anim id est laborum.
 				</p>
-				<p id="team-01" class="quote animate">
+				<p id="team-01" class="quote">
 					<span class="quotes">&#8220;</span>Lorem ipsum dolor sit amet,
 					consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -292,7 +298,7 @@
 					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 					culpa qui officia deserunt mollit anim id est laborum.
 				</p>
-				<p id="team-02" class="quote animate">
+				<p id="team-02" class="quote">
 					<span class="quotes">&#8220;</span>Lorem ipsum dolor sit amet,
 					consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -340,7 +346,9 @@
 				</p>
 				<p id="testimonials-04">Lorem Ipsum, lorem ipsum</p>
 			</div>
-			<button class="centered button animate">DALŠÍ HODNOCENÍ</button>
+			<div class="button-wrapper">
+				<button class="button">DALŠÍ HODNOCENÍ</button>
+			</div>
 		</article>
 
 		<article id="questions-and-answers" class="animate">
@@ -393,24 +401,39 @@
 
 		<footer id="contact-us">
 			<h2>KONTAKT</h2>
-			<div>
-				<p>
-					Lorem Ipsum 666<br />
-					Teplice<br />
-					415 01
-				</p>
+			<div class="contact-us-wrapper">
+				<div>
+					<p>Lorem Ipsum 666</p>
+					<p>Teplice</p>
+					<p>415 01</p>
+				</div>
+				<div class="contact">
+					<a href="tel:+420777123456">+420 777 123 456</a>
+					<a href="mailto:info@dyplomka.cz">info@dyplomka.cz</a>
+				</div>
+				<div class="social-icons">
+					<a
+						href="https://www.facebook.com/aneta.kuroi.schwarzova"
+						target="blank"
+					>
+						<img src="assets/logo/facebook-icon.svg" alt="facebook icon" />
+					</a>
+					<a href="https://www.google.com/" target="blank">
+						<img src="assets/logo/instagram-icon.svg" alt="instagram icon" />
+					</a>
+				</div>
 			</div>
-			<div class="contact">
-				<p>
-					+420 777 123 456<br />
-					info@dyplomka.cz
+			<div class="credits">
+				<p class="credits-main-background">
+					Home page background photo by
+					<a target="blank" href="https://unsplash.com/@brookecagle"
+						>Brooke Cagle
+					</a>
+					on <a target="blank" href="https://unsplash.com">Unsplash</a>
 				</p>
-			</div>
-			<div class="social-icons">
-				<img src="assets/logo/facebook-icon.svg" alt="facebook icon" />
-				<img src="assets/logo/instagram-icon.svg" alt="instagram icon" />
+				<p class="credits-about-us"></p>
 			</div>
 		</footer>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
