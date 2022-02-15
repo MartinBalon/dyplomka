@@ -449,8 +449,10 @@ header div {
 }
 
 #how-it-works img {
-  height: 8rem;
-  width: 100%;
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
   margin-bottom: 0.5rem;
 }
 
@@ -639,8 +641,8 @@ footer .social-icons {
 }
 
 .animate {
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
   opacity: 0;
   -webkit-transition: ease-out all 0.4s;
   transition: ease-out all 0.4s;
@@ -650,6 +652,41 @@ footer .social-icons {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(30, 30, 30, 0.96);
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.modal p {
+  color: #646464;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0.6rem;
+}
+
+.modal .modal-logo {
+  background: url("/assets/logo/change-orientation.svg") no-repeat center center;
+  background-size: cover;
+  height: 6rem;
+  width: 6rem;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  body {
+    overflow-y: hidden;
+  }
+  .modal {
+    display: block;
+  }
 }
 
 @media screen and (min-height: 37.5em) {
@@ -888,7 +925,18 @@ footer .social-icons {
     margin-top: 4rem;
   }
   #how-it-works .row {
-    max-width: 42.5rem;
+    max-width: 60rem;
+    margin-top: 10rem;
+  }
+  #how-it-works .main-quote {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  #how-it-works .main-quote .quotes {
+    font-size: 2.4rem;
+  }
+  #how-it-works #main-author {
+    font-size: 1.4rem;
   }
   #about-us {
     max-width: 93.75rem;
@@ -977,28 +1025,40 @@ footer .social-icons {
   }
   article {
     max-width: 1920px;
-    padding: 12rem 2rem 1rem 2rem;
+    padding: 14rem 2rem 1rem 2rem;
   }
   article:first-of-type {
-    padding: 6rem 2rem 1rem 2rem;
+    padding: 10rem 2rem 1rem 2rem;
   }
   .col {
     max-width: 20%;
+  }
+  #how-it-works .row {
+    margin-top: 14rem;
+  }
+  #testimonials .col {
+    margin: auto;
+  }
+  #testimonials .button {
+    margin-top: 3.5rem;
   }
   .button-wrapper {
     width: 100%;
   }
   h2 {
     margin-bottom: 5rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 500;
+  }
+  p {
+    font-size: 1rem;
   }
   #our-team .col {
     margin: 0 4rem;
   }
   #questions-and-answers .accordion,
   #questions-and-answers .accordion-content {
-    width: 60%;
+    width: 51%;
   }
 }
 
@@ -1009,6 +1069,28 @@ footer .social-icons {
   }
   #hamburger-menu-close {
     right: calc(0.8rem + 78%);
+  }
+  header div {
+    max-width: 50rem;
+  }
+  header h1 {
+    font-size: 3.4rem;
+    line-height: 3.8rem;
+  }
+  header p {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  .button {
+    font-size: 1.4rem;
+    max-width: 16rem;
+    padding: 1rem 2rem;
+  }
+  article {
+    padding: 14rem 6rem 1rem 6rem;
+  }
+  article:first-of-type {
+    padding: 10rem 6rem 1rem 6rem;
   }
 }
 

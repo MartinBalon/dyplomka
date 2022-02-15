@@ -278,8 +278,10 @@ header {
 		margin-top: $primaryTopMarginM;
 	}
 	img {
-		height: 8rem;
-		width: 100%;
+		height: 150px;
+		width: 150px;
+		display: block;
+		margin: 0 auto;
 		margin-bottom: $primaryBottomMarginXS;
 	}
 	.row {
@@ -438,7 +440,7 @@ footer {
 }
 
 .animate {
-	transform: translateY(50px);
+	transform: translateY(100px);
 	opacity: 0;
 	transition: ease-out all 0.4s;
 }
@@ -446,6 +448,40 @@ footer {
 .show {
 	transform: translateY(0);
 	opacity: 1;
+}
+
+.modal {
+	position: fixed;
+	z-index: 999;
+	background-color: rgba(30, 30, 30, 0.96);
+	height: 100%;
+	width: 100%;
+	display: none;
+	p {
+		color: rgb(100, 100, 100);
+		font-size: 1.2rem;
+		font-weight: 700;
+		text-align: center;
+		margin-top: 0.6rem;
+	}
+	.modal-logo {
+		background: url("/assets/logo/change-orientation.svg") no-repeat center
+			center;
+		background-size: cover;
+		height: 6rem;
+		width: 6rem;
+		margin: 0 auto;
+		margin-top: 100px;
+	}
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+	body {
+		overflow-y: hidden;
+	}
+	.modal {
+		display: block;
+	}
 }
 
 @media screen and (min-height: $phoneHeight) {
@@ -708,8 +744,21 @@ footer {
 		}
 	}
 
-	#how-it-works .row {
-		max-width: 42.5rem;
+	#how-it-works {
+		.row {
+			max-width: 60rem;
+			margin-top: 10rem;
+		}
+		.main-quote {
+			font-size: 2rem;
+			line-height: 2.4rem;
+			.quotes {
+				font-size: 2.4rem;
+			}
+		}
+		#main-author {
+			font-size: $fontSizeXXL;
+		}
 	}
 
 	#about-us {
@@ -803,14 +852,29 @@ footer {
 
 	article {
 		max-width: 1920px;
-		padding: 12rem 2rem 1rem 2rem;
+		padding: 14rem 2rem 1rem 2rem;
 		&:first-of-type {
-			padding: 6rem 2rem 1rem 2rem;
+			padding: 10rem 2rem 1rem 2rem;
 		}
 	}
 
 	.col {
 		max-width: 20%;
+	}
+
+	#how-it-works {
+		.row {
+			margin-top: 14rem;
+		}
+	}
+
+	#testimonials {
+		.col {
+			margin: auto;
+		}
+		.button {
+			margin-top: 3.5rem;
+		}
 	}
 
 	.button-wrapper {
@@ -819,8 +883,12 @@ footer {
 
 	h2 {
 		margin-bottom: 5rem;
-		font-size: $fontSizeXXXL;
+		font-size: 2rem;
 		font-weight: 500;
+	}
+
+	p {
+		font-size: $fontSizeM;
 	}
 
 	#our-team .col {
@@ -829,7 +897,7 @@ footer {
 
 	#questions-and-answers .accordion,
 	#questions-and-answers .accordion-content {
-		width: 60%;
+		width: 51%;
 	}
 }
 
@@ -840,6 +908,33 @@ footer {
 
 	#hamburger-menu-close {
 		right: calc(0.8rem + 78%);
+	}
+
+	header {
+		div {
+			max-width: 50rem;
+		}
+		h1 {
+			font-size: 3.4rem;
+			line-height: 3.8rem;
+		}
+		p {
+			font-size: 1.8rem;
+			line-height: 2rem;
+		}
+	}
+
+	.button {
+		font-size: 1.4rem;
+		max-width: 16rem;
+		padding: 1rem 2rem;
+	}
+
+	article {
+		padding: 14rem 6rem 1rem 6rem;
+		&:first-of-type {
+			padding: 10rem 6rem 1rem 6rem;
+		}
 	}
 }
 
