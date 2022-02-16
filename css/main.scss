@@ -267,10 +267,17 @@ header {
 	background: $primaryGradient;
 	color: $primaryColor;
 	padding: $primaryPaddingXS;
+	position: relative;
+	z-index: -1;
 	div {
 		padding-top: 2rem;
 		padding-bottom: 4rem;
 	}
+}
+
+.wrapper {
+	z-index: 1;
+	background-color: white;
 }
 
 #how-it-works {
@@ -296,6 +303,7 @@ header {
 		padding: $secondaryPaddingS;
 		position: relative;
 		margin-bottom: $primaryBottomMarginS;
+		align-self: stretch;
 		h3 {
 			margin-bottom: $primaryBottomMarginXS;
 		}
@@ -453,12 +461,12 @@ footer {
 .modal {
 	position: fixed;
 	z-index: 999;
-	background-color: rgba(30, 30, 30, 0.96);
+	background-color: #1e1e1ef5;
 	height: 100%;
 	width: 100%;
 	display: none;
 	p {
-		color: rgb(100, 100, 100);
+		color: #646464;
 		font-size: 1.2rem;
 		font-weight: 700;
 		text-align: center;

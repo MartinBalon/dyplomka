@@ -437,11 +437,18 @@ header {
   background: linear-gradient(90deg, #082990 0%, #087cac 100%);
   color: #fff;
   padding: 2rem 0.8rem;
+  position: relative;
+  z-index: -1;
 }
 
 header div {
   padding-top: 2rem;
   padding-bottom: 4rem;
+}
+
+.wrapper {
+  z-index: 1;
+  background-color: white;
 }
 
 #how-it-works .col {
@@ -467,6 +474,9 @@ header div {
   padding: 0.8rem;
   position: relative;
   margin-bottom: 1.5rem;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
 }
 
 #what-will-you-gain .col h3 {
@@ -657,7 +667,7 @@ footer .social-icons {
 .modal {
   position: fixed;
   z-index: 999;
-  background-color: rgba(30, 30, 30, 0.96);
+  background-color: #1e1e1ef5;
   height: 100%;
   width: 100%;
   display: none;

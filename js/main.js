@@ -140,3 +140,14 @@ links.forEach((link) => {
 		event.preventDefault();
 	});
 });
+
+// Parallax
+window.addEventListener("scroll", function () {
+	const distance = window.scrollY;
+	document.querySelector("header").style.transform = `translateY(${
+		distance * 0.8
+	}px)`;
+	document.querySelector("#home > div").style.transform = `translateY(${
+		distance * -0.6
+	}px)`;
+});
