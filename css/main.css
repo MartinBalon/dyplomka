@@ -5,9 +5,9 @@
   line-height: 1.5rem;
 }
 
-.about-us-images,
-.credits-main-background,
-.credits-about-us {
+.landscape-background,
+.credits-about-us,
+.hidden {
   display: none;
 }
 
@@ -103,8 +103,8 @@ a {
   display: block;
   height: 0.2rem;
   width: 3rem;
-  background: -webkit-gradient(linear, left top, right top, from(#d94d00), to(#ffcf5f));
-  background: linear-gradient(90deg, #d94d00 0%, #ffcf5f 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#0071d9), to(#d65fff));
+  background: linear-gradient(90deg, #0071d9 0%, #d65fff 100%);
   border-radius: 0.3rem;
   margin: 0 auto;
   margin-top: 0.6rem;
@@ -121,8 +121,8 @@ a {
   display: block;
   height: 0.2rem;
   width: 3rem;
-  background: -webkit-gradient(linear, left top, right top, from(#0071d9), to(#d65fff));
-  background: linear-gradient(90deg, #0071d9 0%, #d65fff 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#ff0033), to(#ed0556));
+  background: linear-gradient(90deg, #ff0033 0%, #ed0556 100%);
   border-radius: 0.3rem;
   margin: 0 auto;
   margin-top: 0.6rem;
@@ -139,8 +139,8 @@ a {
   display: block;
   height: 0.2rem;
   width: 3rem;
-  background: -webkit-gradient(linear, left top, right top, from(#d94d00), to(#ffcf5f));
-  background: linear-gradient(90deg, #d94d00 0%, #ffcf5f 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#0071d9), to(#d65fff));
+  background: linear-gradient(90deg, #0071d9 0%, #d65fff 100%);
   border-radius: 0.3rem;
   margin-top: 0.6rem;
   margin-bottom: 0.4rem;
@@ -163,78 +163,6 @@ a {
   margin-bottom: 0.4rem;
 }
 
-#testimonials-01 {
-  text-align: center;
-  color: #969696;
-}
-
-#testimonials-01::before {
-  content: "";
-  display: block;
-  height: 0.2rem;
-  width: 3rem;
-  background: -webkit-gradient(linear, left top, right top, from(#5ed900), to(#ffdc5f));
-  background: linear-gradient(90deg, #5ed900 0%, #ffdc5f 100%);
-  border-radius: 0.3rem;
-  margin: 0 auto;
-  margin-top: 0.6rem;
-  margin-bottom: 0.4rem;
-}
-
-#testimonials-02 {
-  text-align: center;
-  color: #969696;
-}
-
-#testimonials-02::before {
-  content: "";
-  display: block;
-  height: 0.2rem;
-  width: 3rem;
-  background: -webkit-gradient(linear, left top, right top, from(#d900ad), to(#ff5f6f));
-  background: linear-gradient(90deg, #d900ad 0%, #ff5f6f 100%);
-  border-radius: 0.3rem;
-  margin: 0 auto;
-  margin-top: 0.6rem;
-  margin-bottom: 0.4rem;
-}
-
-#testimonials-03 {
-  text-align: center;
-  color: #969696;
-}
-
-#testimonials-03::before {
-  content: "";
-  display: block;
-  height: 0.2rem;
-  width: 3rem;
-  background: -webkit-gradient(linear, left top, right top, from(#0071d9), to(#d65fff));
-  background: linear-gradient(90deg, #0071d9 0%, #d65fff 100%);
-  border-radius: 0.3rem;
-  margin: 0 auto;
-  margin-top: 0.6rem;
-  margin-bottom: 0.4rem;
-}
-
-#testimonials-04 {
-  text-align: center;
-  color: #969696;
-}
-
-#testimonials-04::before {
-  content: "";
-  display: block;
-  height: 0.2rem;
-  width: 3rem;
-  background: -webkit-gradient(linear, left top, right top, from(#ff5733), to(#d93636));
-  background: linear-gradient(90deg, #ff5733 0%, #d93636 100%);
-  border-radius: 0.3rem;
-  margin: 0 auto;
-  margin-top: 0.6rem;
-  margin-bottom: 0.4rem;
-}
-
 article {
   padding: 4rem 0.8rem 1rem 0.8rem;
 }
@@ -242,7 +170,7 @@ article {
 .button {
   margin: 0 auto;
   display: block;
-  max-width: 12rem;
+  max-width: 14rem;
   text-align: center;
   line-height: 1;
   letter-spacing: 1px;
@@ -271,6 +199,7 @@ article {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
+  z-index: 2;
   top: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -286,7 +215,7 @@ article {
   color: #fff;
   letter-spacing: 1px;
   display: inline;
-  cursor: pointer;
+  cursor: auto;
 }
 
 .navbar p span {
@@ -299,9 +228,11 @@ article {
   -webkit-box-shadow: 0rem 0.4rem 0.8rem 0rem #00000033;
           box-shadow: 0rem 0.4rem 0.8rem 0rem #00000033;
   z-index: 98;
+  padding: 0.8rem;
 }
 
 .navbar-active p {
+  cursor: pointer;
   color: #333;
 }
 
@@ -374,7 +305,7 @@ nav {
   transition: transform ease-out 0.5s, -webkit-transform ease-out 0.5s;
   height: 100%;
   width: 100%;
-  background: #333;
+  background: #191919;
   color: #ddd;
   padding: 4rem 2rem;
 }
@@ -390,6 +321,11 @@ nav a {
 
 nav a:last-child {
   margin-bottom: 0;
+}
+
+nav a:hover,
+nav .active {
+  color: #ff2f59;
 }
 
 nav p {
@@ -432,22 +368,82 @@ nav .social-icons a {
 }
 
 header {
-  background: #082990;
-  background: -webkit-gradient(linear, left top, right top, from(#082990), to(#087cac));
-  background: linear-gradient(90deg, #082990 0%, #087cac 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(10, 10, 10, 0.95)), to(rgba(211, 58, 58, 0.8))), url("/assets/img/small-phone-background.jpg") no-repeat center center;
+  background: linear-gradient(90deg, rgba(10, 10, 10, 0.95) 0%, rgba(211, 58, 58, 0.8) 100%), url("/assets/img/small-phone-background.jpg") no-repeat center center;
+  background-size: cover;
   color: #fff;
   padding: 2rem 0.8rem;
   position: relative;
-  z-index: -1;
+  z-index: 0;
+  height: 100%;
 }
 
-header div {
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+header #home-content {
+  padding-top: 1rem;
+}
+
+@-webkit-keyframes moveMouseDown {
+  from {
+    bottom: -10px;
+  }
+  to {
+    bottom: -20px;
+  }
+}
+
+@keyframes moveMouseDown {
+  from {
+    bottom: -10px;
+  }
+  to {
+    bottom: -20px;
+  }
+}
+
+#scroll-down {
+  position: relative;
+}
+
+#mouse,
+#mouse-down {
+  position: absolute;
+}
+
+#scroll-down {
+  width: 36px;
+  height: 52px;
+  padding: 5px;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+#scroll-down #mouse {
+  width: 26px;
+  height: 42px;
+  background: url("/assets/logo/mouse.svg") no-repeat center center;
+  background-size: contain;
+}
+
+#scroll-down #mouse-down {
+  width: 20px;
+  height: 12px;
+  background: url("/assets/logo/mouse-down.svg") no-repeat center center;
+  background-size: contain;
+  left: 50%;
+  margin-left: -10px;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-name: moveMouseDown;
+          animation-name: moveMouseDown;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .wrapper {
-  z-index: 1;
+  position: relative;
+  z-index: 2;
   background-color: white;
 }
 
@@ -456,8 +452,8 @@ header div {
 }
 
 #how-it-works img {
-  height: 150px;
-  width: 150px;
+  height: 100%;
+  width: 146px;
   display: block;
   margin: 0 auto;
   margin-bottom: 0.5rem;
@@ -465,6 +461,11 @@ header div {
 
 #how-it-works .row {
   text-align: center;
+}
+
+#how-it-works span {
+  font-size: 1rem;
+  color: #ff5733;
 }
 
 #what-will-you-gain .col {
@@ -522,6 +523,8 @@ header div {
 
 #our-team .col {
   margin-bottom: 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 #our-team h3 {
@@ -534,6 +537,23 @@ header div {
 
 #testimonials .col {
   margin-bottom: 1.5rem;
+}
+
+#testimonials .testimonial-author {
+  text-align: left;
+  color: #969696;
+}
+
+#testimonials .testimonial-author::before {
+  content: "";
+  display: block;
+  height: 0.2rem;
+  width: 3rem;
+  background: -webkit-gradient(linear, left top, right top, from(#d900ad), to(#ff5f6f));
+  background: linear-gradient(90deg, #d900ad 0%, #ff5f6f 100%);
+  border-radius: 0.3rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
 }
 
 #testimonials .button {
@@ -561,6 +581,8 @@ header div {
   outline: none;
   -webkit-transition: background ease-out 0.4s;
   transition: background ease-out 0.4s;
+  color: #1e1e1e;
+  font-weight: bold;
 }
 
 #questions-and-answers .accordion:hover {
@@ -595,13 +617,16 @@ header div {
 }
 
 #questions-and-answers .accordion-content {
-  padding: 0 1rem;
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
   font-size: 0.9rem;
   background: #fafafa;
+}
+
+#questions-and-answers .accordion-content p {
+  padding: 1rem;
 }
 
 footer {
@@ -690,7 +715,7 @@ footer .social-icons {
   margin-top: 100px;
 }
 
-@media screen and (max-height: 500px) and (orientation: landscape) {
+@media screen and (max-height: 31.25em) and (orientation: landscape) {
   body {
     overflow-y: hidden;
   }
@@ -712,14 +737,52 @@ footer .social-icons {
   header {
     padding: 2rem;
   }
-  header div {
-    padding-top: 6rem;
+  header #home-content {
+    padding-top: 3rem;
   }
   header .button {
     margin-top: 3rem;
   }
+  #scroll-down {
+    margin-top: 10%;
+  }
   #what-will-you-gain .col {
     padding: 1rem 1.6rem;
+  }
+}
+
+@media screen and (min-width: 22.5em) and (min-height: 43.75em) {
+  header {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(10, 10, 10, 0.95)), to(rgba(211, 58, 58, 0.8))), url("/assets/img/large-phone-background.jpg") no-repeat center center;
+    background: linear-gradient(90deg, rgba(10, 10, 10, 0.95) 0%, rgba(211, 58, 58, 0.8) 100%), url("/assets/img/large-phone-background.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  header #home-content {
+    padding-top: 6rem;
+  }
+  #scroll-down {
+    margin-top: 15%;
+  }
+}
+
+@media screen and (min-width: 22.5em) and (min-height: 46.875em) {
+  header #home-content {
+    padding-top: 8rem;
+  }
+  #scroll-down {
+    margin-top: 20%;
+  }
+}
+
+@media screen and (min-width: 22.5em) and (min-height: 50em) {
+  header #home-content {
+    padding-top: 12rem;
+  }
+}
+
+@media screen and (min-width: 22.5em) and (min-height: 55em) {
+  header #home-content {
+    padding-top: 12rem;
   }
 }
 
@@ -728,15 +791,12 @@ footer .social-icons {
     padding: 4rem 3rem 1rem 3rem;
   }
   .col,
-  header div {
+  #home-content {
     max-width: 22.5rem;
     margin: auto;
   }
-  header {
-    padding: 4rem 3rem 1rem 3rem;
-  }
-  header div {
-    padding-top: 4rem;
+  header #home-content {
+    padding-top: 15rem;
   }
   header .button {
     margin-top: 3rem;
@@ -781,22 +841,34 @@ footer .social-icons {
     display: block;
   }
   header {
-    background: -webkit-gradient(linear, left top, right top, from(rgba(9, 65, 177, 0.96)), to(rgba(95, 20, 212, 0.75))), url("/assets/img/small-tablet-background.jpg") no-repeat center center;
-    background: linear-gradient(90deg, rgba(9, 65, 177, 0.96) 0%, rgba(95, 20, 212, 0.75) 100%), url("/assets/img/small-tablet-background.jpg") no-repeat center center;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(10, 10, 10, 0.95)), to(rgba(211, 58, 58, 0.8))), url("/assets/img/tablet-background.jpg") no-repeat center center;
+    background: linear-gradient(90deg, rgba(10, 10, 10, 0.95) 0%, rgba(211, 58, 58, 0.8) 100%), url("/assets/img/tablet-background.jpg") no-repeat center center;
     background-size: cover;
   }
-  header div {
-    padding-top: 10rem;
-    padding-bottom: 6rem;
+  header #home-content {
+    padding-top: 0;
+    position: absolute;
+    bottom: 32%;
     margin: 0;
-    max-width: 28rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 36rem;
   }
   header h1 {
-    font-size: 1.8rem;
-    line-height: 2rem;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
   }
   header p {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  #scroll-down {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    margin-left: -13px;
   }
   .showNavigation {
     -webkit-transform: translate(50%);
@@ -886,6 +958,14 @@ footer .social-icons {
 }
 
 @media screen and (min-width: 64em) {
+  header #home-content {
+    bottom: 28%;
+    margin: 0;
+    left: 5rem;
+  }
+  #scroll-down {
+    bottom: 8%;
+  }
   .showNavigation {
     -webkit-transform: translate(60%);
             transform: translate(60%);
@@ -903,7 +983,7 @@ footer .social-icons {
     margin-top: 8rem;
   }
   article {
-    padding: 8rem 2rem 1rem 2rem;
+    padding: 6rem 2rem;
   }
 }
 
@@ -915,21 +995,21 @@ footer .social-icons {
   #hamburger-menu-close {
     right: calc(0.8rem + 70%);
   }
+  .landscape-background {
+    display: inline-block;
+  }
+  .portrait-background {
+    display: none;
+  }
   header {
-    padding: 10rem 6rem;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(10, 10, 10, 0.98)), to(rgba(212, 81, 81, 0.4))), url("/assets/img/laptop-background.jpg") no-repeat center center;
+    background: linear-gradient(90deg, rgba(10, 10, 10, 0.98) 0%, rgba(212, 81, 81, 0.4) 100%), url("/assets/img/laptop-background.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 0;
   }
-  header div {
-    padding-top: 8rem;
-    padding-bottom: 0;
+  header #home-content {
+    bottom: 24%;
     max-width: 36rem;
-  }
-  header h1 {
-    font-size: 2.4rem;
-    line-height: 2.6rem;
-  }
-  header p {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
   }
   header .button {
     margin-top: 4rem;
@@ -969,62 +1049,101 @@ footer .social-icons {
     height: 442px;
     width: 300px;
   }
-  .about-us-images img {
+  .about-us-images div {
     position: absolute;
   }
   .about-us-images .img-01 {
     top: 0;
     left: 0;
+    width: 150px;
+    height: 171px;
+    background: url("/assets/img/about-us-01.png") no-repeat center center;
+    background-size: cover;
   }
   .about-us-images .img-02 {
     top: 0;
     left: 160px;
+    width: 150px;
+    height: 171px;
+    background: url("/assets/img/about-us-02.png") no-repeat center center;
+    background-size: cover;
   }
   .about-us-images .img-03 {
     top: 0;
     left: 320px;
+    width: 150px;
+    height: 171px;
+    background: url("/assets/img/about-us-03.png") no-repeat center center;
+    background-size: cover;
   }
   .about-us-images .img-04 {
     top: 136px;
     left: -80px;
+    width: 150px;
+    height: 171px;
+    background: url("/assets/img/about-us-04.png") no-repeat center center;
+    background-size: cover;
   }
   .about-us-images .img-05 {
     top: 136px;
     left: 80px;
+    width: 150px;
+    height: 171px;
+    background: url("/assets/img/about-us-05.png") no-repeat center center;
+    background-size: cover;
   }
   .about-us-images .img-06 {
     top: 136px;
     left: 240px;
+    width: 150px;
+    height: 171px;
+    background: url("/assets/img/about-us-06.png") no-repeat center center;
+    background-size: cover;
   }
   .about-us-images .img-07 {
     top: 272px;
-    left: 0px;
+    left: 0;
+    width: 150px;
+    height: 171px;
+    background: url("/assets/img/about-us-07.png") no-repeat center center;
+    background-size: cover;
   }
   .about-us-images .img-08 {
     top: 272px;
     left: 160px;
+    width: 150px;
+    height: 171px;
+    background: url("/assets/img/about-us-08.png") no-repeat center center;
+    background-size: cover;
   }
   .about-us-images .img-09 {
     top: 272px;
     left: 320px;
+    width: 150px;
+    height: 171px;
+    background: url("/assets/img/about-us-09.png") no-repeat center center;
+    background-size: cover;
   }
   .contact-us-wrapper div {
     width: 12%;
+  }
+  .credits-about-us {
+    display: block;
   }
 }
 
 @media screen and (min-width: 100em) {
   header {
-    height: 100%;
-    padding: 10rem 8rem;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(9, 65, 177, 0.96)), to(rgba(95, 20, 212, 0.75))), url("/assets/img/desktop-background.jpg") no-repeat center center;
-    background: linear-gradient(90deg, rgba(9, 65, 177, 0.96) 0%, rgba(95, 20, 212, 0.75) 100%), url("/assets/img/desktop-background.jpg") no-repeat center center;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(10, 10, 10, 0.98)), to(rgba(212, 81, 81, 0.4))), url("/assets/img/desktop-background.jpg") no-repeat center center;
+    background: linear-gradient(90deg, rgba(10, 10, 10, 0.98) 0%, rgba(212, 81, 81, 0.4) 100%), url("/assets/img/desktop-background.jpg") no-repeat center center;
     background-size: cover;
   }
-  header div {
-    padding-top: 0;
+  header #home-content {
     position: absolute;
     bottom: 20%;
+  }
+  header #scroll-down {
+    bottom: 6%;
   }
   .showNavigation {
     -webkit-transform: translate(75%);
@@ -1035,10 +1154,7 @@ footer .social-icons {
   }
   article {
     max-width: 1920px;
-    padding: 14rem 2rem 1rem 2rem;
-  }
-  article:first-of-type {
-    padding: 10rem 2rem 1rem 2rem;
+    padding: 7rem 2rem;
   }
   .col {
     max-width: 20%;
@@ -1047,10 +1163,11 @@ footer .social-icons {
     margin-top: 14rem;
   }
   #testimonials .col {
-    margin: auto;
+    margin: 0 2rem;
+    margin-bottom: 4rem;
   }
   #testimonials .button {
-    margin-top: 3.5rem;
+    margin-top: 1rem;
   }
   .button-wrapper {
     width: 100%;
@@ -1066,6 +1183,9 @@ footer .social-icons {
   #our-team .col {
     margin: 0 4rem;
   }
+  #questions-and-answers {
+    margin-bottom: 0;
+  }
   #questions-and-answers .accordion,
   #questions-and-answers .accordion-content {
     width: 51%;
@@ -1080,7 +1200,7 @@ footer .social-icons {
   #hamburger-menu-close {
     right: calc(0.8rem + 78%);
   }
-  header div {
+  header #home-content {
     max-width: 50rem;
   }
   header h1 {
@@ -1097,10 +1217,25 @@ footer .social-icons {
     padding: 1rem 2rem;
   }
   article {
-    padding: 14rem 6rem 1rem 6rem;
+    padding: 8rem 6rem;
   }
-  article:first-of-type {
-    padding: 10rem 6rem 1rem 6rem;
+  .social-icons img {
+    height: 3rem;
+    width: 3rem;
+    margin: 0 0.3rem;
+  }
+  footer {
+    padding: 4rem 6rem 1rem 6rem;
+  }
+  footer h2 {
+    margin-bottom: 3rem;
+  }
+  footer .contact-us-wrapper {
+    margin-bottom: 2rem;
+  }
+  footer .contact-us-wrapper a,
+  footer .contact-us-wrapper p {
+    font-size: 1.2rem;
   }
 }
 

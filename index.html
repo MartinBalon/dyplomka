@@ -45,13 +45,19 @@
 				<div></div>
 			</div>
 			<span class="nav-links" data-identifier="nav-links">
-				<a href="#home" data-identifier="link">ÚVOD</a>
-				<a href="#how-it-works" data-identifier="link">
+				<a href="#home" id="nav-home" data-identifier="link" class="active"
+					>ÚVOD</a
+				>
+				<a href="#how-it-works" id="nav-how-it-works" data-identifier="link">
 					JAK PROBÍHÁ SPOLUPRÁCE
 				</a>
-				<a href="#about-us" data-identifier="link">O NÁS</a>
-				<a href="#testimonials" data-identifier="link">HODNOCENÍ</a>
-				<a href="#contact-us" data-identifier="link">KONTAKT</a>
+				<a href="#about-us" id="nav-about-us" data-identifier="link">O NÁS</a>
+				<a href="#testimonials" id="nav-testimonials" data-identifier="link"
+					>HODNOCENÍ</a
+				>
+				<a href="#contact-us" id="nav-contact-us" data-identifier="link"
+					>KONTAKT</a
+				>
 			</span>
 			<a href="tel:+420777123456">+420 777 123 456</a>
 			<a href="mailto:info@dyplomka.cz">info@dyplomka.cz</a>
@@ -82,7 +88,7 @@
 		</div>
 
 		<header id="home">
-			<div>
+			<div id="home-content">
 				<h1>PROFESIONÁLNÍ KOUČOVÁNÍ DIPLOMOVÝCH PRACÍ</h1>
 				<p>
 					Čeká tě psaní diplomové práce a nevíš jak na to? Marně přemýšlíš, jak
@@ -90,11 +96,16 @@
 					zpracoval &#40;a&#41; diplomovou práci a nevíš, zda splňuje všechny
 					náležitosti, ať už po formální či obsahové stránce? Potřebuješ
 					konzultace? Revize? Zpětnou vazbu? Nevíš, jak správně citovat? Jak má
-					vypadat poznámkový aparát? Nebo máš nějaké jiné další otázky?
+					vypadat poznámkový aparát? Nebo máš nějaké jiné další otázky? Neváhej
+					nás kontaktovat!
 				</p>
 				<a href="#contact-us" class="button" data-identifier="link">
-					NAPIŠTE NÁM
+					KONTAKTUJ NÁS
 				</a>
+			</div>
+			<div id="scroll-down">
+				<div id="mouse"></div>
+				<div id="mouse-down"></div>
 			</div>
 		</header>
 
@@ -102,17 +113,58 @@
 			<article id="how-it-works">
 				<h2 class="animate">JAK PROBÍHÁ SPOLUPRÁCE</h2>
 				<div class="col animate">
-					<img src="assets/logo/01.jpg" alt="" />
+					<img
+						srcset="
+							assets/logo/01_1x.png,
+							assets/logo/01_2x.png,
+							assets/logo/01_3x.png
+						"
+						src="assets/logo/01_1x.png"
+						loading="lazy"
+						alt=""
+					/>
 					<p>
-						Osobní schůzka. dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						<span>Osobní schůzka.</span>dolor sit amet, consectetur adipiscing
+						elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						laboris nisi ut
 					</p>
 				</div>
 				<div class="col animate">
-					<img src="assets/logo/02.jpg" alt="" />
+					<img
+						srcset="
+							assets/logo/02_1x.png,
+							assets/logo/02_2x.png,
+							assets/logo/02_3x.png
+						"
+						src="assets/logo/01_1x.png"
+						loading="lazy"
+						alt=""
+					/>
 					<p>
-						Vytvoření harmogramu spolupráce. dolor sit amet, consectetur
+						<span>Vytvoření harmogramu spolupráce.</span> dolor sit amet,
+						consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+						esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+						cupidatat non proident, sunt in culpa qui officia deserunt mollit
+						anim id est laborum.
+					</p>
+				</div>
+				<div class="col animate">
+					<img
+						srcset="
+							assets/logo/03_1x.png,
+							assets/logo/03_2x.png,
+							assets/logo/03_3x.png
+						"
+						src="assets/logo/01_1x.png"
+						loading="lazy"
+						alt=""
+					/>
+					<p>
+						<span>Koučink a konzultace.</span> dolor sit amet, consectetur
 						adipiscing elit, sed do eiusmod tempor incididunt ut labore et
 						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 						exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -123,28 +175,25 @@
 					</p>
 				</div>
 				<div class="col animate">
-					<img src="assets/logo/03.jpg" alt="" />
+					<img
+						srcset="
+							assets/logo/04_1x.png,
+							assets/logo/04_2x.png,
+							assets/logo/04_3x.png
+						"
+						src="assets/logo/01_1x.png"
+						loading="lazy"
+						alt=""
+					/>
 					<p>
-						Koučink a konzultace. dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-						nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-				</div>
-				<div class="col animate">
-					<img src="assets/logo/04.jpg" alt="" />
-					<p>
-						Obhajoba diplomové práce. dolor sit amet, consectetur adipiscing
-						elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-						dolor in reprehenderit in voluptate velit esse cillum dolore eu
-						fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est
-						laborum.
+						<span>Obhajoba diplomové práce.</span> dolor sit amet, consectetur
+						adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+						esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+						cupidatat non proident, sunt in culpa qui officia deserunt mollit
+						anim id est laborum.
 					</p>
 				</div>
 				<div class="row animate">
@@ -220,83 +269,41 @@
 			<article id="about-us">
 				<h2 class="animate">NĚCO MÁLO O NÁS</h2>
 				<div class="about-us-images">
-					<img
-						src="/assets/img/about-us-01.png"
-						class="img-01 animate"
-						alt="Image by Edwin andrade - source unsplash.com"
-					/>
-					<img
-						src="/assets/img/about-us-02.png"
-						class="img-02 animate"
-						alt="Image by Marissa Cristina - source unsplash.com"
-					/>
-					<img
-						src="/assets/img/about-us-03.png"
-						class="img-03 animate"
-						alt="Image by Brooke cagle - source unsplash.com"
-					/>
-					<img
-						src="/assets/img/about-us-04.png"
-						class="img-04 animate"
-						alt="Image by Ibrahim abazid - source unsplash.com"
-					/>
-					<img
-						src="/assets/img/about-us-05.png"
-						class="img-05 animate"
-						alt="Image by Avel Chuklanov - source unsplash.com"
-					/>
-					<img
-						src="/assets/img/about-us-06.png"
-						class="img-06 animate"
-						alt="Image by Kobu agency - source unsplash.com"
-					/>
-					<img
-						src="/assets/img/about-us-07.png"
-						class="img-07 animate"
-						alt="Image by Mikael kristenson - source unsplash.com"
-					/>
-					<img
-						src="/assets/img/about-us-08.png"
-						class="img-08 animate"
-						alt="Image by Alejandro escamilla - source unsplash.com"
-					/>
-					<img
-						src="/assets/img/about-us-09.png"
-						class="img-09 animate"
-						alt="Image by Iñaki del Olmo - source unsplash.com"
-					/>
+					<div class="img-01 animate"></div>
+					<div class="img-02 animate"></div>
+					<div class="img-03 animate"></div>
+					<div class="img-04 animate"></div>
+					<div class="img-05 animate"></div>
+					<div class="img-06 animate"></div>
+					<div class="img-07 animate"></div>
+					<div class="img-08 animate"></div>
+					<div class="img-09 animate"></div>
 				</div>
 				<div class="about-us-description">
 					<p class="animate" id="about-us-desc">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea commodo consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-						dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-						incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-						veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-						ea commodo consequat. Duis aute irure dolor in reprehenderit in
-						voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-						officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-						amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-						ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-						nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-						esse cillum dolore eu fugiat nulla pariatur.
+						Tento projekt vznikl z vlastních zkušeností během studia. Kromě
+						studia matérie k tématu závěrečné práce jsme začali studovat i
+						nejrůznější akademickou literaturu a vyhlášky fakult týkající se
+						psaní odborných prací apod. Díky tomu se na nás stále častěji začali
+						obracet naši kolegové s prosbami o radu či nezávazný názor. Vše
+						vyvrcholilo v momentě, kdy jsme byli nezávisle na sobě postaveni
+						před výzvu pomoct našim kolegům, jejichž práce nebyla s úspěchem
+						obhájena a navíc byla doporučena k přepracování. Pedagogická činnost
+						nám nebyla cizí, proto jsme se rozhodli předat dál naše nabité
+						znalosti. Kolegiální výpomoc nyní proměňujeme v profesionální
+						poradenskou činnost s cílem předávat dál naše nabyté zkušenosti s
+						psaním závěrečných prací.
 					</p>
 					<div class="animate">
 						<p class="quote">
-							<span class="quotes">&#8220;</span>Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-							nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat.<span class="quotes">&#8221;</span>
+							<span class="quotes">&#8220;</span>Jsme absolventi, studenti
+							doktorandského studia působící mj. v akademické sféře. Úspěšně
+							jsme obhájili závěrečné práce s hodnocením výborně. Aktivně se
+							odborně vzděláváme ve svých oblastech, své výstupy publikujeme a
+							prezentujeme na odborných konferencích.
+							<span class="quotes">&#8221;</span>
 						</p>
-						<p id="about-us-author">Lorem Ipsum</p>
+						<p id="about-us-author">Mgr. Martin Kozakovič</p>
 					</div>
 				</div>
 			</article>
@@ -305,15 +312,11 @@
 				<h2 class="animate">NÁŠ TÝM</h2>
 				<div class="col animate">
 					<img src="/assets/img/aneta-schwarcova.jpg" alt="Aneta Schwarzová" />
-					<h3>Aneta Schwarzová</h3>
+					<h3>JUDr. Aneta Schwarzová</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea commodo consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum.
+						Doktorandka na Fakultě právnické Západočeské univerzity v Plzni,
+						finalistka soutěže Studentská vědecká odborná činnost &#40;v oblasti
+						právo &#41;, asistentka soudce krajského soudu.
 					</p>
 					<p id="team-01" class="quote">
 						<span class="quotes">&#8220;</span>Lorem ipsum dolor sit amet,
@@ -325,15 +328,11 @@
 				</div>
 				<div class="col animate">
 					<img src="/assets/img/lorem-ipsum.jpg" alt="Lorem Ipsum" />
-					<h3>Lorem Ipsum</h3>
+					<h3>Mgr. Martin Kozakovič</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea commodo consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum.
+						Doktorand na Přírodovědecké fakultě UJEP, finalista FAMELAB 2016,
+						spoluřešitel přeshraničního projektu Grenzraum/Příhraničí 2.0,
+						řešitel SGS, odborný asistent FSI UJEP.
 					</p>
 					<p id="team-02" class="quote">
 						<span class="quotes">&#8220;</span>Lorem ipsum dolor sit amet,
@@ -347,52 +346,88 @@
 
 			<article id="testimonials">
 				<h2 class="animate">NAPSALI O NÁS</h2>
-				<div class="col animate">
+				<div class="col animate testimonial">
 					<p>
-						&#8220;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-						do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-						enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-						ut aliquip ex ea commodo consequat.&#8221;
+						<span class="quotes">&#8220;</span>Lorem ipsum dolor sit amet,
+						consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.<span class="quotes">&#8220;</span>
 					</p>
-					<p id="testimonials-01">Lorem Ipsum, lorem ipsum</p>
+					<p class="testimonial-author">Lorem Ipsum, lorem ipsum</p>
 				</div>
-				<div class="col animate">
+				<div class="col animate testimonial">
 					<p>
-						&#8220;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-						do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-						enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-						ut aliquip ex ea commodo consequat.&#8221;
+						<span class="quotes">&#8220;</span>Lorem ipsum dolor sit amet,
+						consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.<span class="quotes">&#8220;</span>
 					</p>
-					<p id="testimonials-02">Lorem Ipsum, lorem ipsum</p>
+					<p class="testimonial-author">Lorem Ipsum, lorem ipsum</p>
 				</div>
-				<div class="col animate">
+				<div class="col animate testimonial">
 					<p>
-						&#8220;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-						do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-						enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-						ut aliquip ex ea commodo consequat.&#8221;
+						<span class="quotes">&#8220;</span>Lorem ipsum dolor sit amet,
+						consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.<span class="quotes">&#8220;</span>
 					</p>
-					<p id="testimonials-03">Lorem Ipsum, lorem ipsum</p>
+					<p class="testimonial-author">Lorem Ipsum, lorem ipsum</p>
 				</div>
-				<div class="col animate">
+				<div class="col animate testimonial">
 					<p>
-						&#8220;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-						do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-						enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-						ut aliquip ex ea commodo consequat.&#8221;
+						<span class="quotes">&#8220;</span>Lorem ipsum dolor sit amet,
+						consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.<span class="quotes">&#8220;</span>
 					</p>
-					<p id="testimonials-04">Lorem Ipsum, lorem ipsum</p>
+					<p class="testimonial-author">Lorem Ipsum, lorem ipsum</p>
+				</div>
+				<div class="col animate testimonial hidden">
+					<p>
+						<span class="quotes">&#8220;</span>Lorem ipsum dolor sit amet,
+						consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.<span class="quotes">&#8220;</span>
+					</p>
+					<p class="testimonial-author">Lorem Ipsum, lorem ipsum</p>
+				</div>
+				<div class="col animate testimonial hidden">
+					<p>
+						<span class="quotes">&#8220;</span>Lorem ipsum dolor sit amet,
+						consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.<span class="quotes">&#8220;</span>
+					</p>
+					<p class="testimonial-author">Lorem Ipsum, lorem ipsum</p>
 				</div>
 				<div class="button-wrapper animate">
-					<button class="button">DALŠÍ HODNOCENÍ</button>
+					<button class="button" data-identifier="testimonials-button">
+						DALŠÍ HODNOCENÍ
+					</button>
 				</div>
 			</article>
 
 			<article id="questions-and-answers" class="animate">
 				<h2>ČASTÉ DOTAZY</h2>
-				<button class="accordion">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				</button>
+				<button class="accordion">Proč máte oslovit právě nás?</button>
+				<div class="accordion-content">
+					<p>
+						Jsme profesionálové. Nadšenci ve svých oborech. Záleží nám na tom,
+						aby naše publikované texty měly jak patřičnou odbornou, tak i
+						jazykovou, citační a formální úroveň. Rádi trávíme čas získáváním
+						nových informací. Rádi pracujeme efektivně. Načerpání našich
+						znalostí nám zabralo průběžně několik let samostudia. Máme přehled,
+						díky kterému šetříme Váš čas.
+					</p>
+				</div>
+
+				<button class="accordion">Pro koho jsou naše služby určené?</button>
 				<div class="accordion-content">
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -405,9 +440,7 @@
 					</p>
 				</div>
 
-				<button class="accordion">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				</button>
+				<button class="accordion">Jaké rady poskytujeme zdarma?</button>
 				<div class="accordion-content">
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -420,9 +453,120 @@
 					</p>
 				</div>
 
-				<button class="accordion">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				</button>
+				<button class="accordion">Co je naším cílem?</button>
+				<div class="accordion-content">
+					<p>
+						Naším cílem je maximalizovat Váš osobní potenciál. Postupným
+						koučingem a konzultacemi Vás naučíme psát odborné texty
+						&#40;závěrečné práce&#41; a správně nad nimi přemýšlet. Upozorníme
+						Vás na to, čemu se máte při psaní vyvarovat a na co se naopak
+						zaměřit. Mezi naše další cíle patří zvýšení kvality Vašeho psaní
+						tak, abychom minimalizovali množství chyb, které byste mohli v
+						budoucnu udělat. Jsme realisti. Je běžné, že v textu sem tam nějaká
+						chyba zůstane. Dokonce i dr. Sheldon Cooper se dopustil školácké
+						chyby ve své práci, kterou předložit Stephenu Hawkingovi, na straně
+						2 &#40;The Big Bang Theory: The Hawking Excitation&#41;. Naším cílem
+						je tomuto se vyvarovat. Při opětovném čtení vlastního textu má autor
+						tendenci některé chyby přehlížet. Mozek známý text přeskakuje a je
+						těžší se soustředit. Zpětnou vazbou a systematickými korekturami
+						snížíme množství možných chyb na absolutní minimum. V neposlední
+						řadě je naším cílem Vám předat nezastupitelné znalosti, které můžete
+						v budoucnu opět využít i v obecné rovině. Cílíme na praktičnost
+						informací, které Vám předáváme. Věřte, že to co se s námi naučíte
+						při psaní Vaší závěrečné práce, posune kupředu i Vaší formální
+						korespondenci, tvorbu motivačních dopisů a další písemný projev,
+						který je v dnešní digitální době něčím nepostradatelným. Věřte, že
+						správná volba slov a kvalitně napsaný email dokáže na vašeho
+						budoucího zaměstnavatele či klienta udělat stejně silný dojem, jako
+						vhodné vystupovaní a znalosti etikety. První dojem můžete udělat
+						pouze jednou, proto jedna dobrá rada na závěr - nepodceňte jej.
+					</p>
+				</div>
+
+				<button class="accordion">Jak probíhá spolupráce?</button>
+				<div class="accordion-content">
+					<p>
+						Harmonogram a míra spolupráce se bude odvíjet s ohledem na stav, v
+						jakém se vaše práce nachází. V rámci úvodních konzultací Vám bude
+						navržen individuální plán. Při psaní práce budeme průběžně text
+						konzultovat, dostane se Vám potřebných znalostí pro napsání úspěšné
+						a kvalitní závěrečné práce, průběžné zpětné vazby, konstruktivní
+						kritiky, která Vás posune správným směrem.
+					</p>
+				</div>
+
+				<button class="accordion">Jaké rady poskytujeme zdarma?</button>
+				<div class="accordion-content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						aliquip ex ea commodo consequat. Duis aute irure dolor in
+						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+						culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+
+				<button class="accordion">Jaké služby poskytujeme?</button>
+				<div class="accordion-content">
+					<p>
+						Naše služby se dají rozdělit do pěti obecnějších skupin.
+						Kontaktování a vstupní konzultace &#40;zjištění stavu práce a tvorba
+						časového harmonogramu&#41;, zadání a příprava závěrečné práce
+						&#40;volba oblasti a konkrétního tématu diplomové práce, rešerše
+						tématu, kontrola dostupnosti zdrojů, formulace návrhu individuálního
+						tématu závěrečné práce, volba školitele, komunikace s vedoucím či
+						školitelem, navržení osnovy, tvorba anotace, odevzdání zadání
+						diplomové práce&#41;, vlastní psaní a korektury &#40;obecný úvod do
+						strategie psaní závěrečných prací, etické zásady psaní odborné
+						práce, pojem originalita a plagiátorství, nastínění nejčastějších
+						chyb při psaní závěrečných prací, harmonogram a strategie psaní
+						práce, organizace času, struktura a rozsah práce, metodologie psaní
+						práce se zaměřením na vědecké metody pro psaní diplomové práce
+						&#40;obecně teoretické metody: např. komparace, analýza, dedukce;
+						empirické metody: např. experiment, pozorování, měření&#41;,
+						poznámkový aparát a jeho tvorba &#40;poznámky, citace, odkazy&#41;,
+						materiální a formální náležitosti závěrečné práce, argumentační
+						logika a vnitřní struktura práce, náležitosti a tvorba úvodu a
+						závěru diplomové práce, přílohy diplomové práce, resumé, jazykové
+						korektury &#40;gramatické, slohové, stylistické&#41;, formátování a
+						grafická úprava práce, závěrečná kontrola všech náležitostí práce,
+						odevzdání závěrečné práce&#41;, postagenda &#40;seznámení se s
+						posudky, zpracování dotazů a případná reakce na podnětu z posudků,
+						systematické zpracování přípravy na obhajobu, nácvik obhajoby
+						diplomové práce&#41;, zpětná vazba &#40;vyhodnocení vašich výsledků,
+						zhodnocení spokojenosti, recenze, doporučení&#41;.
+					</p>
+				</div>
+
+				<button class="accordion">Co je to normostrana?</button>
+				<div class="accordion-content">
+					<p>
+						Neboli normovaná strana je jednotkou psaného textu. Jedná se o
+						textovou stranu s pevně stanovenou délkou. Standardně se určuje
+						podle počtu znaků. Obecně platí, že má normostrana 1 800 znaků
+						včetně mezer. Normostrana by měla zhruba odpovídat jedné straně
+						velikosti A4, nejedná se však automaticky o fyzický počet stran, ani
+						listů. Vliv na množství textu, které se fykticky vejde na jednu
+						„fyzickou stranu“ má např. velikost písma, řádkování apod. Z tohoto
+						důvodu je pro účely posuzovaní textového rozsahu rozhodující pouze
+						počet znaků včetně mezer.
+					</p>
+				</div>
+
+				<button class="accordion">Kolik zaplatím za Vaše služby?</button>
+				<div class="accordion-content">
+					<p>
+						Zakládáme si na individuálním přístupu. To je hlavním důvodem, proč
+						jsou naše ceny pouze orientační. Pro každou práci je třeba provést
+						individuální kalkulaci. Výsledkem je, že zaplatíte pouze to, co
+						skutečně využijete. V případě zájmu nás kontaktuje o nezávaznou
+						kalkulaci.
+					</p>
+				</div>
+
+				<button class="accordion">Jaké jsou způsoby platby?</button>
 				<div class="accordion-content">
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -464,12 +608,51 @@
 			<div class="credits">
 				<p class="credits-main-background">
 					Home page background photo by
-					<a target="blank" href="https://unsplash.com/@brookecagle"
+					<a
+						target="blank"
+						class="landscape-background"
+						href="https://unsplash.com/@brookecagle"
 						>Brooke Cagle
 					</a>
-					on <a target="blank" href="https://unsplash.com">Unsplash</a>
+					<a
+						target="blank"
+						class="portrait-background"
+						href="https://unsplash.com/@chuklanov"
+						>Avel Chuklanov
+					</a>
+					on <a target="blank" href="https://unsplash.com">Unsplash.com</a>
 				</p>
-				<p class="credits-about-us"></p>
+				<p class="credits-about-us">
+					About us page photos by following authors:
+					<a target="blank" href="https://unsplash.com/@theunsteady5">
+						Edwin Andrade |
+					</a>
+					<a target="blank" href="https://unsplash.com/@stilclassics">
+						Marissa Cristina - STIL |
+					</a>
+					<a target="blank" href="https://unsplash.com/@brookecagle"
+						>Brooke Cagle |
+					</a>
+					<a target="blank" href="https://unsplash.com/@iabzd"
+						>Ibrahim Abazid |
+					</a>
+					<a target="blank" href="https://unsplash.com/@chuklanov"
+						>Avel Chuklanov |
+					</a>
+					<a target="blank" href="https://unsplash.com/@kobuagency"
+						>KOBU Agency |
+					</a>
+					<a target="blank" href="https://unsplash.com/@mikael_k"
+						>Mikael Kristenson |
+					</a>
+					<a target="blank" href="https://unsplash.com/@alejandroescamilla"
+						>Alejandro Escamilla |
+					</a>
+					<a target="blank" href="https://unsplash.com/@inakihxz"
+						>Iñaki del Olmo |
+					</a>
+					Source: <a target="blank" href="https://unsplash.com">Unsplash.com</a>
+				</p>
 			</div>
 		</footer>
 		<script src="js/main.js"></script>

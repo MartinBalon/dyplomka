@@ -47,3 +47,12 @@
 		margin-bottom: 0;
 	}
 }
+
+@mixin aboutUsImages($image, $top, $left) {
+	top: $top;
+	left: $left;
+	width: 150px;
+	height: 171px;
+	background: url($image) no-repeat center center;
+	background-size: cover;
+}

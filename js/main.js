@@ -102,28 +102,38 @@ elementsToAnimate.forEach((element) => {
 // Smooth scroll
 const scroll = (toElement, speed) => {
 	const windowObject = window;
-	let windowPosistion = windowObject.pageYOffset;
+	let windowPosition = windowObject.pageYOffset;
+	const header = document.getElementById("home");
+	const headerHeight = header.clientHeight;
 	const pointer = toElement.getAttribute("href").slice(1);
 	const element = document.getElementById(pointer);
-	const elementOffset = element.offsetTop;
+	let elementOffset;
+
+	// z-index & position relative of wrapper and header causes wrong offset of elements
+	// thus inaccurate scrolling - add height od header to each non-home destination to counter this
+	if (pointer === "home") {
+		elementOffset = element.offsetTop;
+	} else {
+		elementOffset = element.offsetTop + headerHeight;
+	}
 
 	const counter = setInterval(() => {
-		if (windowPosistion > elementOffset) {
+		if (windowPosition > elementOffset) {
 			// from bottom to top
-			windowObject.scrollTo(0, windowPosistion);
-			windowPosistion -= speed;
+			windowObject.scrollTo(0, windowPosition);
+			windowPosition -= speed;
 
-			if (windowPosistion <= elementOffset) {
+			if (windowPosition <= elementOffset) {
 				// scrolling until elemOffset is higher than scrollbar position, cancel interval and set scrollbar to element position
 				clearInterval(counter);
 				windowObject.scrollTo(0, elementOffset);
 			}
 		} else {
 			// from top to bottom
-			windowObject.scrollTo(0, windowPosistion);
-			windowPosistion += speed;
+			windowObject.scrollTo(0, windowPosition);
+			windowPosition += speed;
 
-			if (windowPosistion >= elementOffset) {
+			if (windowPosition >= elementOffset) {
 				// scroll until scrollbar is lower than element, cancel interval and set scrollbar to element position
 				clearInterval(counter);
 				windowObject.scrollTo(0, elementOffset);
@@ -150,4 +160,67 @@ window.addEventListener("scroll", function () {
 	document.querySelector("#home > div").style.transform = `translateY(${
 		distance * -0.6
 	}px)`;
+});
+
+// testimonials
+const testimonialsButton = document.querySelector(
+	'[data-identifier="testimonials-button"]'
+);
+const testimonials = document.querySelectorAll(".testimonial");
+
+testimonialsButton.addEventListener("click", () => {
+	testimonials.forEach((testimonial) => {
+		if (testimonial.classList.contains("hidden")) {
+			testimonial.classList.remove("hidden");
+		}
+	});
+	testimonialsButton.remove();
+});
+
+// highlight active nav link
+const navLinksArray = document.querySelectorAll(".nav-links > a");
+const pageSections = [];
+const navItems = {};
+
+navLinksArray.forEach((link) => {
+	const pageSectionName = link.hash.substring(1);
+	const sectionElement = document.getElementById(pageSectionName);
+	const sectionElementRect = sectionElement.getBoundingClientRect();
+	const navigationElement = document.getElementById(`nav-${pageSectionName}`);
+	pageSections.push({
+		elementName: `${pageSectionName}`,
+		position: sectionElementRect.top,
+	});
+	navItems[`${pageSectionName}`] = navigationElement;
+});
+
+const updateActiveNavLink = (link) => {
+	const navItem = navItems[link];
+	navItem.classList.add("active");
+	Object.values(navItems).forEach((item) => {
+		if (item != navItem) {
+			item.classList.remove("active");
+		}
+	});
+};
+
+window.addEventListener("scroll", () => {
+	const deviceHeight = window.innerHeight;
+	const threshold = deviceHeight / 3;
+	const scrollPosition = window.scrollY + threshold;
+
+	for (let i = 0; i < pageSections.length; i++) {
+		if (
+			pageSections[i + 1] &&
+			scrollPosition >= pageSections[i].position &&
+			scrollPosition < pageSections[i + 1].position
+		) {
+			updateActiveNavLink(pageSections[i].elementName);
+		} else if (
+			scrollPosition + deviceHeight / 2 >=
+			pageSections[pageSections.length - 1].position
+		) {
+			updateActiveNavLink(pageSections[i].elementName);
+		}
+	}
 });

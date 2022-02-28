@@ -9,9 +9,9 @@
 	line-height: 1.5rem;
 }
 
-.about-us-images,
-.credits-main-background,
-.credits-about-us {
+.landscape-background,
+.credits-about-us,
+.hidden {
 	display: none;
 }
 
@@ -97,35 +97,19 @@ a {
 }
 
 #main-author {
-	@include author($mainAuthorGradient);
+	@include author($tertiaryGradient);
 }
 
 #about-us-author {
-	@include author($aboutUsGradient);
+	@include author($linksGradient);
 }
 
 #team-01 {
-	@include author($mainAuthorGradient, left);
+	@include author($tertiaryGradient, left);
 }
 
 #team-02 {
-	@include author($aboutUsGradient, left);
-}
-
-#testimonials-01 {
-	@include author($testimonial01Gradient);
-}
-
-#testimonials-02 {
-	@include author($testimonial02Gradient);
-}
-
-#testimonials-03 {
-	@include author($testimonial03Gradient);
-}
-
-#testimonials-04 {
-	@include author($testimonial04Gradient);
+	@include author($tertiaryGradient, left);
 }
 
 article {
@@ -135,7 +119,7 @@ article {
 .button {
 	margin: 0 auto;
 	display: block;
-	max-width: 12rem;
+	max-width: 14rem;
 	text-align: center;
 	line-height: 1;
 	letter-spacing: 1px;
@@ -159,6 +143,7 @@ article {
 	width: 100%;
 	display: flex;
 	position: fixed;
+	z-index: 2;
 	top: 0;
 	justify-content: space-between;
 	p {
@@ -168,12 +153,19 @@ article {
 		color: $primaryColor;
 		letter-spacing: 1px;
 		display: inline;
-		cursor: pointer;
+		cursor: auto;
 		span {
 			font-family: $fontFamilyLogo;
 			color: $detailColor;
 		}
 	}
+	// .logo-dyplomka {
+	// 	height: 32px;
+	// 	width: 100%;
+	// }
+	// .logo-dyplomka-dark {
+	// 	display: none;
+	// }
 	transition: all ease-out 0.4s;
 }
 
@@ -181,9 +173,22 @@ article {
 	background: $primaryColor;
 	box-shadow: $secondaryBoxShadow;
 	z-index: 98;
+	padding: 0.8rem;
 	p {
+		cursor: pointer;
 		color: $secondaryColor;
 	}
+	// .logo-dyplomka-dark {
+	// 	display: inline;
+	// 	position: absolute;
+	// 	height: 32px;
+	// 	width: 100px;
+	// 	top: 0.8rem;
+	// 	left: 0.8rem;
+	// }
+	// .logo-dyplomka {
+	// 	display: none;
+	// }
 }
 
 #hamburger-menu,
@@ -226,7 +231,7 @@ nav {
 	transition: transform ease-out 0.5s;
 	height: 100%;
 	width: 100%;
-	background: $secondaryColor;
+	background: rgb(25, 25, 25);
 	color: $darkPrimaryColor;
 	padding: 4rem 2rem;
 	a {
@@ -239,6 +244,10 @@ nav {
 	}
 	a:last-child {
 		margin-bottom: 0;
+	}
+	a:hover,
+	.active {
+		color: #ff2f59;
 	}
 	p {
 		font-size: $fontSizeM;
@@ -263,20 +272,67 @@ nav {
 }
 
 header {
-	background: $primaryGradientBackground;
-	background: $primaryGradient;
+	background: $secondaryGradientOverlay,
+		url("/assets/img/small-phone-background.jpg") no-repeat center center;
+	background-size: cover;
 	color: $primaryColor;
 	padding: $primaryPaddingXS;
 	position: relative;
-	z-index: -1;
-	div {
-		padding-top: 2rem;
-		padding-bottom: 4rem;
+	z-index: 0;
+	height: 100%;
+	#home-content {
+		padding-top: 1rem;
+	}
+}
+
+@keyframes moveMouseDown {
+	from {
+		bottom: -10px;
+	}
+
+	to {
+		bottom: -20px;
+	}
+}
+
+#scroll-down {
+	position: relative;
+}
+
+#mouse,
+#mouse-down {
+	position: absolute;
+}
+
+#scroll-down {
+	width: 36px;
+	height: 52px;
+	padding: 5px;
+	margin: 0 auto;
+	margin-top: 5%;
+	#mouse {
+		width: 26px;
+		height: 42px;
+		background: url("/assets/logo/mouse.svg") no-repeat center center;
+		background-size: contain;
+	}
+	#mouse-down {
+		width: 20px;
+		height: 12px;
+		background: url("/assets/logo/mouse-down.svg") no-repeat center center;
+		background-size: contain;
+		left: 50%;
+		margin-left: -10px;
+		animation-duration: 0.8s;
+		animation-name: moveMouseDown;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
 	}
 }
 
 .wrapper {
-	z-index: 1;
+	position: relative;
+	z-index: 2;
 	background-color: white;
 }
 
@@ -285,14 +341,18 @@ header {
 		margin-top: $primaryTopMarginM;
 	}
 	img {
-		height: 150px;
-		width: 150px;
+		height: 100%;
+		width: 146px;
 		display: block;
 		margin: 0 auto;
 		margin-bottom: $primaryBottomMarginXS;
 	}
 	.row {
 		text-align: center;
+	}
+	span {
+		font-size: 1rem;
+		color: $detailColor;
 	}
 }
 
@@ -346,6 +406,7 @@ header {
 	}
 	.col {
 		margin-bottom: $primaryBottomMarginM;
+		align-self: flex-start;
 	}
 	h3 {
 		margin: $primaryMarginS;
@@ -356,6 +417,9 @@ header {
 #testimonials {
 	.col {
 		margin-bottom: $primaryBottomMarginS;
+	}
+	.testimonial-author {
+		@include author($testimonialGradient, left);
 	}
 	.button {
 		max-width: 20rem;
@@ -377,6 +441,8 @@ header {
 		cursor: pointer;
 		outline: none;
 		transition: background ease-out 0.4s;
+		color: #1e1e1e;
+		font-weight: bold;
 		&:hover {
 			background: #fafafa;
 		}
@@ -404,12 +470,14 @@ header {
 		}
 	}
 	.accordion-content {
-		padding: 0 1rem;
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.2s ease-out;
 		font-size: $fontSizeS;
 		background: #fafafa;
+		p {
+			padding: 1rem;
+		}
 	}
 }
 
@@ -483,7 +551,7 @@ footer {
 	}
 }
 
-@media screen and (max-height: 500px) and (orientation: landscape) {
+@media screen and (max-height: 31.25em) and (orientation: landscape) {
 	body {
 		overflow-y: hidden;
 	}
@@ -505,16 +573,56 @@ footer {
 
 	header {
 		padding: $primaryPaddingS;
-		div {
-			padding-top: 6rem;
+		#home-content {
+			padding-top: 3rem;
 		}
 		.button {
 			margin-top: $primaryTopMarginM;
 		}
 	}
 
+	#scroll-down {
+		margin-top: 10%;
+	}
+
 	#what-will-you-gain .col {
 		padding: $secondaryPaddingM;
+	}
+}
+
+@media screen and (min-width: 22.5em) and (min-height: 43.75em) {
+	header {
+		background: $secondaryGradientOverlay,
+			url("/assets/img/large-phone-background.jpg") no-repeat center center;
+		background-size: cover;
+		#home-content {
+			padding-top: 6rem;
+		}
+	}
+
+	#scroll-down {
+		margin-top: 15%;
+	}
+}
+
+@media screen and (min-width: 22.5em) and (min-height: 46.875em) {
+	header #home-content {
+		padding-top: 8rem;
+	}
+	#scroll-down {
+		margin-top: 20%;
+	}
+}
+
+@media screen and (min-width: 22.5em) and (min-height: 50em) {
+	header #home-content {
+		padding-top: 12rem;
+	}
+}
+
+@media screen and (min-width: 22.5em) and (min-height: 55em) {
+	header #home-content {
+		padding-top: 12rem;
 	}
 }
 
@@ -524,15 +632,14 @@ footer {
 	}
 
 	.col,
-	header div {
+	#home-content {
 		max-width: 22.5rem;
 		margin: auto;
 	}
 
 	header {
-		padding: $primaryPaddingXL;
-		div {
-			padding-top: 4rem;
+		#home-content {
+			padding-top: 15rem;
 		}
 		.button {
 			margin-top: $primaryTopMarginM;
@@ -587,22 +694,35 @@ footer {
 	}
 
 	header {
-		background: $primaryGradientOverlay,
-			url("/assets/img/small-tablet-background.jpg") no-repeat center center;
+		background: $secondaryGradientOverlay,
+			url("/assets/img/tablet-background.jpg") no-repeat center center;
 		background-size: cover;
-		div {
-			padding-top: 10rem;
-			padding-bottom: 6rem;
+		#home-content {
+			padding-top: 0;
+			position: absolute;
+			bottom: 32%;
 			margin: 0;
-			max-width: 28rem;
+			left: 0;
+			right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 36rem;
 		}
 		h1 {
-			font-size: $fontSizeXXXL;
-			line-height: 2rem;
+			font-size: $fontSize4XL;
+			line-height: 2.6rem;
 		}
 		p {
-			font-size: $fontSizeL;
+			font-size: $fontSizeXXL;
+			line-height: 1.6rem;
 		}
+	}
+
+	#scroll-down {
+		position: absolute;
+		bottom: 10%;
+		left: 50%;
+		margin-left: -13px;
 	}
 
 	.showNavigation {
@@ -696,6 +816,18 @@ footer {
 }
 
 @media screen and (min-width: $tabletWidth) {
+	header {
+		#home-content {
+			bottom: 28%;
+			margin: 0;
+			left: 5rem;
+		}
+	}
+
+	#scroll-down {
+		bottom: 8%;
+	}
+
 	.showNavigation {
 		transform: translate(60%);
 	}
@@ -719,7 +851,7 @@ footer {
 	}
 
 	article {
-		padding: 8rem 2rem 1rem 2rem;
+		padding: 6rem 2rem;
 	}
 }
 
@@ -732,20 +864,22 @@ footer {
 		right: calc(0.8rem + 70%);
 	}
 
+	.landscape-background {
+		display: inline-block;
+	}
+
+	.portrait-background {
+		display: none;
+	}
+
 	header {
-		padding: 10rem 6rem;
-		div {
-			padding-top: 8rem;
-			padding-bottom: 0;
+		background: $primaryGradientOverlay,
+			url("/assets/img/laptop-background.jpg") no-repeat center center;
+		background-size: cover;
+		padding: 0;
+		#home-content {
+			bottom: 24%;
 			max-width: 36rem;
-		}
-		h1 {
-			font-size: $fontSize4XL;
-			line-height: 2.6rem;
-		}
-		p {
-			font-size: $fontSizeXXL;
-			line-height: 1.6rem;
 		}
 		.button {
 			margin-top: 4rem;
@@ -788,44 +922,35 @@ footer {
 		position: relative;
 		height: 442px;
 		width: 300px;
-		img {
+		div {
 			position: absolute;
 		}
 		.img-01 {
-			top: 0;
-			left: 0;
+			@include aboutUsImages("/assets/img/about-us-01.png", 0, 0);
 		}
 		.img-02 {
-			top: 0;
-			left: 160px;
+			@include aboutUsImages("/assets/img/about-us-02.png", 0, 160px);
 		}
 		.img-03 {
-			top: 0;
-			left: 320px;
+			@include aboutUsImages("/assets/img/about-us-03.png", 0, 320px);
 		}
 		.img-04 {
-			top: 136px;
-			left: -80px;
+			@include aboutUsImages("/assets/img/about-us-04.png", 136px, -80px);
 		}
 		.img-05 {
-			top: 136px;
-			left: 80px;
+			@include aboutUsImages("/assets/img/about-us-05.png", 136px, 80px);
 		}
 		.img-06 {
-			top: 136px;
-			left: 240px;
+			@include aboutUsImages("/assets/img/about-us-06.png", 136px, 240px);
 		}
 		.img-07 {
-			top: 272px;
-			left: 0px;
+			@include aboutUsImages("/assets/img/about-us-07.png", 272px, 0);
 		}
 		.img-08 {
-			top: 272px;
-			left: 160px;
+			@include aboutUsImages("/assets/img/about-us-08.png", 272px, 160px);
 		}
 		.img-09 {
-			top: 272px;
-			left: 320px;
+			@include aboutUsImages("/assets/img/about-us-09.png", 272px, 320px);
 		}
 	}
 
@@ -834,19 +959,23 @@ footer {
 			width: 12%;
 		}
 	}
+
+	.credits-about-us {
+		display: block;
+	}
 }
 
 @media screen and (min-width: $laptopWidth) {
 	header {
-		height: 100%;
-		padding: 10rem 8rem;
 		background: $primaryGradientOverlay,
 			url("/assets/img/desktop-background.jpg") no-repeat center center;
 		background-size: cover;
-		div {
-			padding-top: 0;
+		#home-content {
 			position: absolute;
 			bottom: 20%;
+		}
+		#scroll-down {
+			bottom: 6%;
 		}
 	}
 
@@ -860,10 +989,7 @@ footer {
 
 	article {
 		max-width: 1920px;
-		padding: 14rem 2rem 1rem 2rem;
-		&:first-of-type {
-			padding: 10rem 2rem 1rem 2rem;
-		}
+		padding: 7rem 2rem;
 	}
 
 	.col {
@@ -878,10 +1004,11 @@ footer {
 
 	#testimonials {
 		.col {
-			margin: auto;
+			margin: 0 2rem;
+			margin-bottom: 4rem;
 		}
 		.button {
-			margin-top: 3.5rem;
+			margin-top: 1rem;
 		}
 	}
 
@@ -903,6 +1030,10 @@ footer {
 		margin: 0 4rem;
 	}
 
+	#questions-and-answers {
+		margin-bottom: 0;
+	}
+
 	#questions-and-answers .accordion,
 	#questions-and-answers .accordion-content {
 		width: 51%;
@@ -919,7 +1050,7 @@ footer {
 	}
 
 	header {
-		div {
+		#home-content {
 			max-width: 50rem;
 		}
 		h1 {
@@ -939,9 +1070,26 @@ footer {
 	}
 
 	article {
-		padding: 14rem 6rem 1rem 6rem;
-		&:first-of-type {
-			padding: 10rem 6rem 1rem 6rem;
+		padding: 8rem 6rem;
+	}
+
+	.social-icons img {
+		height: 3rem;
+		width: 3rem;
+		margin: 0 0.3rem;
+	}
+
+	footer {
+		padding: 4rem 6rem 1rem 6rem;
+		h2 {
+			margin-bottom: 3rem;
+		}
+		.contact-us-wrapper {
+			margin-bottom: 2rem;
+			a,
+			p {
+				font-size: 1.2rem;
+			}
 		}
 	}
 }

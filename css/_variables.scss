@@ -7,17 +7,16 @@ $lightestSecondaryColor: #969696;
 $detailColor: #ff5733;
 
 // Gradients
-$primaryGradientBackground: #082990;
-$primaryGradient: linear-gradient(
-	90deg,
-	$primaryGradientBackground 0%,
-	#087cac 100%
-);
-
 $primaryGradientOverlay: linear-gradient(
 	90deg,
-	rgba(9, 65, 177, 0.96) 0%,
-	rgba(95, 20, 212, 0.75) 100%
+	rgba(10, 10, 10, 0.98) 0%,
+	rgba(212, 81, 81, 0.4) 100%
+);
+
+$secondaryGradientOverlay: linear-gradient(
+	90deg,
+	rgba(10, 10, 10, 0.95) 0%,
+	rgba(211, 58, 58, 0.8) 100%
 );
 
 $buttonGradientBackground: #ff5733;
@@ -41,6 +40,13 @@ $aboutUsGradient: linear-gradient(
 	#d65fff 100%
 );
 
+$tertiaryGradientBackground: #0071d9;
+$tertiaryGradient: linear-gradient(
+	90deg,
+	$tertiaryGradientBackground 0%,
+	#d65fff 100%
+);
+
 $testimonial01GradientBackground: #5ed900;
 $testimonial01Gradient: linear-gradient(
 	90deg,
@@ -48,10 +54,10 @@ $testimonial01Gradient: linear-gradient(
 	#ffdc5f 100%
 );
 
-$testimonial02GradientBackground: #d900ad;
-$testimonial02Gradient: linear-gradient(
+$testimonialGradientBackground: #d900ad;
+$testimonialGradient: linear-gradient(
 	90deg,
-	$testimonial02GradientBackground 0%,
+	$testimonialGradientBackground 0%,
 	#ff5f6f 100%
 );
 
@@ -67,6 +73,20 @@ $testimonial04Gradient: linear-gradient(
 	90deg,
 	$testimonial04GradientBackground 0%,
 	#d93636 100%
+);
+
+$testimonial05GradientBackground: #33c5ff;
+$testimonial05Gradient: linear-gradient(
+	90deg,
+	$testimonial05GradientBackground 0%,
+	#a536d9 100%
+);
+
+$testimonial06GradientBackground: #ff3333;
+$testimonial06Gradient: linear-gradient(
+	90deg,
+	$testimonial06GradientBackground 0%,
+	#c1d936 100%
 );
 
 $cornerGradientBackground: #12cc38;
