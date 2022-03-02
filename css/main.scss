@@ -922,35 +922,46 @@ footer {
 		position: relative;
 		height: 442px;
 		width: 300px;
-		div {
+		picture {
 			position: absolute;
+			width: 151px;
+			height: 171px;
 		}
 		.img-01 {
-			@include aboutUsImages("/assets/img/about-us-01.png", 0, 0);
+			top: 0;
+			left: 0;
 		}
 		.img-02 {
-			@include aboutUsImages("/assets/img/about-us-02.png", 0, 160px);
+			top: 0;
+			left: 160px;
 		}
 		.img-03 {
-			@include aboutUsImages("/assets/img/about-us-03.png", 0, 320px);
+			top: 0;
+			left: 320px;
 		}
 		.img-04 {
-			@include aboutUsImages("/assets/img/about-us-04.png", 136px, -80px);
+			top: 136px;
+			left: -80px;
 		}
 		.img-05 {
-			@include aboutUsImages("/assets/img/about-us-05.png", 136px, 80px);
+			top: 136px;
+			left: 80px;
 		}
 		.img-06 {
-			@include aboutUsImages("/assets/img/about-us-06.png", 136px, 240px);
+			top: 136px;
+			left: 240px;
 		}
 		.img-07 {
-			@include aboutUsImages("/assets/img/about-us-07.png", 272px, 0);
+			top: 272px;
+			left: 0;
 		}
 		.img-08 {
-			@include aboutUsImages("/assets/img/about-us-08.png", 272px, 160px);
+			top: 272px;
+			left: 160px;
 		}
 		.img-09 {
-			@include aboutUsImages("/assets/img/about-us-09.png", 272px, 320px);
+			top: 272px;
+			left: 320px;
 		}
 	}
 

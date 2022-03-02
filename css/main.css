@@ -1049,80 +1049,46 @@ footer .social-icons {
     height: 442px;
     width: 300px;
   }
-  .about-us-images div {
+  .about-us-images picture {
     position: absolute;
+    width: 151px;
+    height: 171px;
   }
   .about-us-images .img-01 {
     top: 0;
     left: 0;
-    width: 150px;
-    height: 171px;
-    background: url("/assets/img/about-us-01.png") no-repeat center center;
-    background-size: cover;
   }
   .about-us-images .img-02 {
     top: 0;
     left: 160px;
-    width: 150px;
-    height: 171px;
-    background: url("/assets/img/about-us-02.png") no-repeat center center;
-    background-size: cover;
   }
   .about-us-images .img-03 {
     top: 0;
     left: 320px;
-    width: 150px;
-    height: 171px;
-    background: url("/assets/img/about-us-03.png") no-repeat center center;
-    background-size: cover;
   }
   .about-us-images .img-04 {
     top: 136px;
     left: -80px;
-    width: 150px;
-    height: 171px;
-    background: url("/assets/img/about-us-04.png") no-repeat center center;
-    background-size: cover;
   }
   .about-us-images .img-05 {
     top: 136px;
     left: 80px;
-    width: 150px;
-    height: 171px;
-    background: url("/assets/img/about-us-05.png") no-repeat center center;
-    background-size: cover;
   }
   .about-us-images .img-06 {
     top: 136px;
     left: 240px;
-    width: 150px;
-    height: 171px;
-    background: url("/assets/img/about-us-06.png") no-repeat center center;
-    background-size: cover;
   }
   .about-us-images .img-07 {
     top: 272px;
     left: 0;
-    width: 150px;
-    height: 171px;
-    background: url("/assets/img/about-us-07.png") no-repeat center center;
-    background-size: cover;
   }
   .about-us-images .img-08 {
     top: 272px;
     left: 160px;
-    width: 150px;
-    height: 171px;
-    background: url("/assets/img/about-us-08.png") no-repeat center center;
-    background-size: cover;
   }
   .about-us-images .img-09 {
     top: 272px;
     left: 320px;
-    width: 150px;
-    height: 171px;
-    background: url("/assets/img/about-us-09.png") no-repeat center center;
-    background-size: cover;
   }
   .contact-us-wrapper div {
     width: 12%;
