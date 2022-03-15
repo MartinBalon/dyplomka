@@ -8,9 +8,7 @@
 		width: 3rem;
 		background: $gradient;
 		border-radius: $borderRadiusPrimary;
-		@if $alignment == center {
-			margin: 0 auto;
-		}
+		margin: 0 auto;
 		margin-top: 0.6rem;
 		margin-bottom: 0.4rem;
 	}
@@ -48,11 +46,8 @@
 	}
 }
 
-@mixin aboutUsImages($image, $top, $left) {
+@mixin aboutUsImage($png, $top, $left) {
 	top: $top;
 	left: $left;
-	width: 150px;
-	height: 171px;
-	background: url($image) no-repeat center center;
-	background-size: cover;
+	background-image: url($png);
 }

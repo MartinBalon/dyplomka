@@ -50,11 +50,13 @@ h2,
 h1 {
 	font-size: $fontSizeXXL;
 	letter-spacing: 1px;
+	font-weight: 400;
 }
 
 h2 {
 	font-size: $fontSizeXL;
 	margin-bottom: $primaryBottomMarginM;
+	font-weight: 600;
 }
 
 h3,
@@ -65,11 +67,6 @@ h3,
 
 p {
 	font-size: $fontSizeS;
-}
-
-h1,
-h2 {
-	font-weight: bold;
 }
 
 h2,
@@ -104,11 +101,7 @@ a {
 	@include author($linksGradient);
 }
 
-#team-01 {
-	@include author($tertiaryGradient, left);
-}
-
-#team-02 {
+#our-team .quote {
 	@include author($tertiaryGradient, left);
 }
 
@@ -146,26 +139,16 @@ article {
 	z-index: 2;
 	top: 0;
 	justify-content: space-between;
-	p {
-		font-family: $fontFamilyLogo;
-		font-size: $fontSizeXL;
-		font-weight: bold;
-		color: $primaryColor;
-		letter-spacing: 1px;
-		display: inline;
+	a {
 		cursor: auto;
-		span {
-			font-family: $fontFamilyLogo;
-			color: $detailColor;
-		}
 	}
-	// .logo-dyplomka {
-	// 	height: 32px;
-	// 	width: 100%;
-	// }
-	// .logo-dyplomka-dark {
-	// 	display: none;
-	// }
+	.logo-dyplomka {
+		height: 32px;
+		width: 89px;
+	}
+	.logo-dyplomka-dark {
+		display: none;
+	}
 	transition: all ease-out 0.4s;
 }
 
@@ -174,21 +157,20 @@ article {
 	box-shadow: $secondaryBoxShadow;
 	z-index: 98;
 	padding: 0.8rem;
-	p {
+	a {
 		cursor: pointer;
-		color: $secondaryColor;
 	}
-	// .logo-dyplomka-dark {
-	// 	display: inline;
-	// 	position: absolute;
-	// 	height: 32px;
-	// 	width: 100px;
-	// 	top: 0.8rem;
-	// 	left: 0.8rem;
-	// }
-	// .logo-dyplomka {
-	// 	display: none;
-	// }
+	.logo-dyplomka-dark {
+		display: inline;
+		position: absolute;
+		height: 32px;
+		width: 89px;
+		top: 0.8rem;
+		left: 0.8rem;
+	}
+	.logo-dyplomka {
+		display: none;
+	}
 }
 
 #hamburger-menu,
@@ -357,39 +339,31 @@ header {
 }
 
 #what-will-you-gain {
+	h2 {
+		margin-bottom: 4rem;
+	}
 	.col {
-		border-radius: $borderRadiusPrimary;
-		box-shadow: $secondaryBoxShadow;
-		padding: $secondaryPaddingS;
 		position: relative;
-		margin-bottom: $primaryBottomMarginS;
-		align-self: stretch;
-		h3 {
-			margin-bottom: $primaryBottomMarginXS;
+		margin-bottom: 60px;
+		border-radius: $borderRadiusPrimary;
+		background-color: rgb(231, 42, 11);
+		padding: $secondaryPaddingS;
+		padding-top: 40px;
+		p {
+			font-size: $fontSizeM;
+			color: white;
+		}
+		img {
+			position: absolute;
+			top: -37px;
+			left: 50%;
+			margin-left: -33px;
+			width: 66px;
+			height: 74px;
 		}
 	}
-	@include ignoreLastColMarginBottom();
-	.corner {
-		width: 2rem;
-		height: 2rem;
-		background: $cornerGradientBackground;
-		background: $cornerGradient;
-		border-top-left-radius: $borderRadiusPrimary;
-		border-top-right-radius: 0;
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-
-	.tick {
-		position: absolute;
-		width: 1.2rem;
-		height: 1.2em;
-		z-index: 10;
-		top: 0.3rem;
-		left: 0.3rem;
+	.col:nth-child(5) {
+		margin-bottom: 0;
 	}
 }
 
@@ -419,7 +393,7 @@ header {
 		margin-bottom: $primaryBottomMarginS;
 	}
 	.testimonial-author {
-		@include author($testimonialGradient, left);
+		@include author($testimonialGradient);
 	}
 	.button {
 		max-width: 20rem;
@@ -584,10 +558,6 @@ footer {
 	#scroll-down {
 		margin-top: 10%;
 	}
-
-	#what-will-you-gain .col {
-		padding: $secondaryPaddingM;
-	}
 }
 
 @media screen and (min-width: 22.5em) and (min-height: 43.75em) {
@@ -665,6 +635,14 @@ footer {
 		font-size: $fontSizeXL;
 	}
 
+	#what-will-you-gain {
+		.col {
+			p {
+				font-size: $fontSizeL;
+			}
+		}
+	}
+
 	footer p,
 	footer .contact a {
 		font-size: $fontSizeM;
@@ -673,10 +651,6 @@ footer {
 	#how-it-works .col,
 	.row {
 		margin-top: 5rem;
-	}
-
-	#what-will-you-gain .col {
-		margin-bottom: $primaryBottomMarginM;
 	}
 
 	#our-team .col {
@@ -765,10 +739,18 @@ footer {
 	}
 
 	#what-will-you-gain {
+		h2 {
+			margin-bottom: 6rem;
+		}
+		.col {
+			padding: 1rem;
+			padding-top: 45px;
+			width: 45%;
+			height: 10rem;
+		}
 		.col,
-		.col:last-of-type {
-			margin: 1rem;
-			margin-bottom: 1rem;
+		.col:nth-child(5) {
+			margin-bottom: 60px;
 		}
 	}
 
@@ -779,6 +761,7 @@ footer {
 	}
 
 	#our-team .col {
+		margin-top: 0;
 		margin-bottom: 0;
 	}
 
@@ -922,46 +905,39 @@ footer {
 		position: relative;
 		height: 442px;
 		width: 300px;
-		picture {
+		div {
 			position: absolute;
 			width: 151px;
 			height: 171px;
+			background-size: cover;
+			background-position: center;
 		}
 		.img-01 {
-			top: 0;
-			left: 0;
+			@include aboutUsImage("/assets/img/about-us/01_1x.png", 0, 0);
 		}
 		.img-02 {
-			top: 0;
-			left: 160px;
+			@include aboutUsImage("/assets/img/about-us/02_1x.png", 0, 160px);
 		}
 		.img-03 {
-			top: 0;
-			left: 320px;
+			@include aboutUsImage("/assets/img/about-us/03_1x.png", 0, 320px);
 		}
 		.img-04 {
-			top: 136px;
-			left: -80px;
+			@include aboutUsImage("/assets/img/about-us/04_1x.png", 136px, -80px);
 		}
 		.img-05 {
-			top: 136px;
-			left: 80px;
+			@include aboutUsImage("/assets/img/about-us/05_1x.png", 136px, 80px);
 		}
 		.img-06 {
-			top: 136px;
-			left: 240px;
+			@include aboutUsImage("/assets/img/about-us/06_1x.png", 136px, 240px);
 		}
 		.img-07 {
-			top: 272px;
-			left: 0;
+			@include aboutUsImage("/assets/img/about-us/07_1x.png", 272px, 0);
 		}
 		.img-08 {
-			top: 272px;
-			left: 160px;
+			@include aboutUsImage("/assets/img/about-us/08_1x.png", 272px, 160px);
 		}
 		.img-09 {
-			top: 272px;
-			left: 320px;
+			@include aboutUsImage("/assets/img/about-us/09_1x.png", 272px, 320px);
 		}
 	}
 
@@ -1005,6 +981,15 @@ footer {
 
 	.col {
 		max-width: 20%;
+	}
+
+	#what-will-you-gain {
+		.col {
+			padding: 1.4rem;
+			padding-top: 45px;
+			max-width: 22.5%;
+			width: 22.5%;
+		}
 	}
 
 	#how-it-works {
