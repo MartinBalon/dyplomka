@@ -114,13 +114,17 @@ const generateTestimonial = (id, content, author, hidden) => {
 		hidden ? "hidden" : ""
 	}" id="testimonial-${id}">
 		<p>
-			<span class="quotes">&#8220;</span>${adjustedContent}<span class="quotes">&#8220;</span>
+			<span class="quotes">&#8220;</span>
+				${adjustedContent}
+			<span class="quotes">&#8220;</span>
+
+			<span class="show-testimonial" 
+			data-identifier="show-rest-${id}"
+			style="display: ${longContent ? "inline" : "none"}"
+			onClick="showTestimonial(${id})">
+				Zobrazit hodnocení
+			</span>
 		</p>
-		<button class="show-testimonial" 
-		data-identifier="show-rest-${id}"
-		style="display: ${longContent ? "block" : "none"}"
-		onClick="showTestimonial(${id})"
-		>Zobrazit Celé Hodnocení</button>
 		<p class="testimonial-author">${author}</p>
 	</div>`;
 };

@@ -132,15 +132,11 @@ article {
 }
 
 .show-testimonial {
-	border: none;
-	border-radius: $borderRadiusPrimary;
-	background-color: $lightestSecondaryColor;
-	color: white;
+	color: $secondaryColor;
 	cursor: pointer;
-	font-size: $fontSizeXS;
-	padding: 0.4rem 1rem;
-	margin: 0 auto;
-	line-height: 1;
+	text-decoration: underline;
+	font-size: $fontSizeM;
+	margin-left: 0.4rem;
 }
 
 .navbar {
@@ -524,7 +520,7 @@ footer {
 
 .testimonial-modal {
 	padding: 4rem 1rem;
-	overflow-y: scroll;
+	overflow-y: auto;
 	button {
 		position: absolute;
 		right: 1rem;
