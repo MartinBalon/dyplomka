@@ -8,7 +8,9 @@
 		width: 3rem;
 		background: $gradient;
 		border-radius: $borderRadiusPrimary;
-		margin: 0 auto;
+		@if $alignment == center {
+			margin: 0 auto;
+		}
 		margin-top: 0.6rem;
 		margin-bottom: 0.4rem;
 	}

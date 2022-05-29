@@ -139,7 +139,6 @@ a {
   background: -webkit-gradient(linear, left top, right top, from(#0071d9), to(#d65fff));
   background: linear-gradient(90deg, #0071d9 0%, #d65fff 100%);
   border-radius: 0.3rem;
-  margin: 0 auto;
   margin-top: 0.6rem;
   margin-bottom: 0.4rem;
 }
@@ -171,6 +170,18 @@ article {
 
 .button:hover {
   background: #ff5733;
+}
+
+.show-testimonial {
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #969696;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.4rem 1rem;
+  margin: 0 auto;
+  line-height: 1;
 }
 
 .navbar {
@@ -514,7 +525,7 @@ header #home-content {
 }
 
 #testimonials .col {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 #testimonials .testimonial-author {
@@ -668,13 +679,53 @@ footer .social-icons {
   opacity: 1;
 }
 
-.modal {
+.modal,
+.testimonial-modal {
   position: fixed;
   z-index: 999;
   background-color: #1e1e1ef5;
   height: 100%;
   width: 100%;
   display: none;
+}
+
+.testimonial-modal {
+  padding: 4rem 1rem;
+  overflow-y: scroll;
+}
+
+.testimonial-modal button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #ff5733;
+  color: white;
+  padding: 0.4rem 2rem;
+  cursor: pointer;
+}
+
+.testimonial-modal .testimonial-author {
+  text-align: "left";
+  color: #969696;
+  color: white;
+}
+
+.testimonial-modal .testimonial-author::before {
+  content: "";
+  display: block;
+  height: 0.2rem;
+  width: 3rem;
+  background: -webkit-gradient(linear, left top, right top, from(#d900ad), to(#ff5f6f));
+  background: linear-gradient(90deg, #d900ad 0%, #ff5f6f 100%);
+  border-radius: 0.3rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.testimonial-modal p {
+  color: white;
 }
 
 .modal p {
@@ -867,9 +918,6 @@ footer .social-icons {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -939,6 +987,13 @@ footer .social-icons {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+  .testimonial-modal {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    border-radius: 0.3rem;
   }
 }
 
@@ -1091,6 +1146,16 @@ footer .social-icons {
   }
   .credits-about-us {
     display: block;
+  }
+  .testimonial-modal {
+    width: 50rem;
+    height: 40rem;
+    top: 50%;
+    margin-top: -20rem;
+    left: 50%;
+    margin-left: -25rem;
+    border-radius: 0.3rem;
+    padding: 6rem 4rem;
   }
 }
 

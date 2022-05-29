@@ -131,6 +131,18 @@ article {
 	}
 }
 
+.show-testimonial {
+	border: none;
+	border-radius: $borderRadiusPrimary;
+	background-color: $lightestSecondaryColor;
+	color: white;
+	cursor: pointer;
+	font-size: $fontSizeXS;
+	padding: 0.4rem 1rem;
+	margin: 0 auto;
+	line-height: 1;
+}
+
 .navbar {
 	padding: 0.8rem 0.8rem 0.4rem 0.8rem;
 	width: 100%;
@@ -390,7 +402,7 @@ header {
 
 #testimonials {
 	.col {
-		margin-bottom: $primaryBottomMarginS;
+		margin-bottom: $primaryBottomMarginM;
 	}
 	.testimonial-author {
 		@include author($testimonialGradient);
@@ -500,13 +512,40 @@ footer {
 	opacity: 1;
 }
 
-.modal {
+.modal,
+.testimonial-modal {
 	position: fixed;
 	z-index: 999;
 	background-color: #1e1e1ef5;
 	height: 100%;
 	width: 100%;
 	display: none;
+}
+
+.testimonial-modal {
+	padding: 4rem 1rem;
+	overflow-y: scroll;
+	button {
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
+		border: none;
+		border-radius: $borderRadiusPrimary;
+		background-color: $detailColor;
+		color: white;
+		padding: 0.4rem 2rem;
+		cursor: pointer;
+	}
+	.testimonial-author {
+		@include author($testimonialGradient, "left");
+		color: white;
+	}
+	p {
+		color: white;
+	}
+}
+
+.modal {
 	p {
 		color: #646464;
 		font-size: 1.2rem;
@@ -716,7 +755,7 @@ footer {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		align-items: center;
+		// align-items: center;
 		justify-content: center;
 		max-width: 960px;
 		margin: auto;
@@ -795,6 +834,14 @@ footer {
 			width: 25%;
 			align-self: center;
 		}
+	}
+
+	.testimonial-modal {
+		width: 60%;
+		height: 60%;
+		top: 20%;
+		left: 20%;
+		border-radius: $borderRadiusPrimary;
 	}
 }
 
@@ -949,6 +996,17 @@ footer {
 
 	.credits-about-us {
 		display: block;
+	}
+
+	.testimonial-modal {
+		width: 50rem;
+		height: 40rem;
+		top: 50%;
+		margin-top: -20rem;
+		left: 50%;
+		margin-left: -25rem;
+		border-radius: $borderRadiusPrimary;
+		padding: 6rem 4rem;
 	}
 }
 

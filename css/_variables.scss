@@ -19,6 +19,13 @@ $secondaryGradientOverlay: linear-gradient(
 	rgba(211, 58, 58, 0.8) 100%
 );
 
+$tertiaryGradientBackground: #0071d9;
+$tertiaryGradient: linear-gradient(
+	90deg,
+	$tertiaryGradientBackground 0%,
+	#d65fff 100%
+);
+
 $buttonGradientBackground: #ff5733;
 $buttonGradient: linear-gradient(
 	0deg,
@@ -40,53 +47,11 @@ $aboutUsGradient: linear-gradient(
 	#d65fff 100%
 );
 
-$tertiaryGradientBackground: #0071d9;
-$tertiaryGradient: linear-gradient(
-	90deg,
-	$tertiaryGradientBackground 0%,
-	#d65fff 100%
-);
-
-$testimonial01GradientBackground: #5ed900;
-$testimonial01Gradient: linear-gradient(
-	90deg,
-	$testimonial01GradientBackground 0%,
-	#ffdc5f 100%
-);
-
 $testimonialGradientBackground: #d900ad;
 $testimonialGradient: linear-gradient(
 	90deg,
 	$testimonialGradientBackground 0%,
 	#ff5f6f 100%
-);
-
-$testimonial03GradientBackground: #0071d9;
-$testimonial03Gradient: linear-gradient(
-	90deg,
-	$testimonial03GradientBackground 0%,
-	#d65fff 100%
-);
-
-$testimonial04GradientBackground: #ff5733;
-$testimonial04Gradient: linear-gradient(
-	90deg,
-	$testimonial04GradientBackground 0%,
-	#d93636 100%
-);
-
-$testimonial05GradientBackground: #33c5ff;
-$testimonial05Gradient: linear-gradient(
-	90deg,
-	$testimonial05GradientBackground 0%,
-	#a536d9 100%
-);
-
-$testimonial06GradientBackground: #ff3333;
-$testimonial06Gradient: linear-gradient(
-	90deg,
-	$testimonial06GradientBackground 0%,
-	#c1d936 100%
 );
 
 $cornerGradientBackground: #12cc38;
