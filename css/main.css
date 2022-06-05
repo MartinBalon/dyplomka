@@ -70,6 +70,10 @@ h3 {
   text-align: center;
 }
 
+.right h3 {
+  text-align: left;
+}
+
 a {
   text-decoration: none;
 }
@@ -464,6 +468,19 @@ header #home-content {
 #how-it-works span {
   font-size: 1rem;
   color: #ff5733;
+}
+
+#another-services .left {
+  margin-bottom: 2rem;
+}
+
+#another-services .info {
+  font-size: 0.8rem;
+  line-height: 1.25;
+}
+
+#another-services li {
+  font-size: 0.9rem;
 }
 
 #what-will-you-gain h2 {
@@ -945,6 +962,9 @@ footer .social-icons {
   #what-will-you-gain .col:nth-child(5) {
     margin-bottom: 60px;
   }
+  .another-services-wrapper {
+    max-width: 70%;
+  }
   #about-us .about-us-description {
     max-width: 70%;
   }
@@ -1063,6 +1083,23 @@ footer .social-icons {
   }
   #how-it-works #main-author {
     font-size: 1.4rem;
+  }
+  #another-services {
+    padding: 0;
+  }
+  .another-services-wrapper {
+    max-width: 60rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .another-services-wrapper .left {
+    width: 44%;
+    padding-right: 2rem;
+  }
+  .another-services-wrapper .right {
+    width: 56%;
+    padding-left: 4rem;
   }
   #about-us {
     max-width: 93.75rem;

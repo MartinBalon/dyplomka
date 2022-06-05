@@ -74,6 +74,10 @@ h3 {
 	text-align: center;
 }
 
+.right h3 {
+	text-align: left;
+}
+
 a {
 	text-decoration: none;
 }
@@ -343,6 +347,19 @@ header {
 	span {
 		font-size: 1rem;
 		color: $detailColor;
+	}
+}
+
+#another-services {
+	.left {
+		margin-bottom: 2rem;
+	}
+	.info {
+		font-size: 0.8rem;
+		line-height: 1.25;
+	}
+	li {
+		font-size: 0.9rem;
 	}
 }
 
@@ -789,6 +806,10 @@ footer {
 		}
 	}
 
+	.another-services-wrapper {
+		max-width: 70%;
+	}
+
 	#about-us {
 		.about-us-description {
 			max-width: 70%;
@@ -926,6 +947,23 @@ footer {
 		}
 		#main-author {
 			font-size: $fontSizeXXL;
+		}
+	}
+
+	#another-services {
+		padding: 0;
+	}
+
+	.another-services-wrapper {
+		max-width: 60rem;
+		display: flex;
+		.left {
+			width: 44%;
+			padding-right: 2rem;
+		}
+		.right {
+			width: 56%;
+			padding-left: 4rem;
 		}
 	}
 
