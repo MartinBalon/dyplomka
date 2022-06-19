@@ -224,3 +224,25 @@ window.addEventListener("scroll", () => {
 		}
 	}
 });
+
+// terms & condition
+const termsContent = document.getElementById("terms");
+const termsWrapper = document.getElementById("terms-wrapper");
+
+const toggleTermsAndCondtion = (show) => {
+	document.body.style.overflowY = show ? "hidden" : "auto";
+	termsContent.style.display = show ? "block" : "none";
+	termsWrapper.style.display = show ? "block" : "none";
+};
+
+const termsBtn = document.getElementById("terms-btn");
+const closeTermsBtns = document.querySelectorAll(
+	'[data-identifier="close-terms"]'
+);
+
+closeTermsBtns.forEach((btn) => {
+	btn.addEventListener("click", () => toggleTermsAndCondtion(false));
+});
+
+termsBtn.addEventListener("click", () => toggleTermsAndCondtion(true));
+termsWrapper.addEventListener("click", () => toggleTermsAndCondtion(false));
